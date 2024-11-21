@@ -8,7 +8,8 @@ const menuVariants = {
     opacity: 1,
     x: 0,
     transition: {
-      staggerChildren: 0.2,
+      duration: 0.3,
+      staggerChildren: 0.3,
     },
   },
 };
@@ -27,7 +28,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="flex h-20 mb-2 bg-transparent border-2 rounded-b-2xl px-4 text-white items-center w-11/12 mx-auto"
+      className="flex h-20 mb-2 bg-transparent px-4 text-white items-center w-11/12 mx-auto"
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
@@ -52,7 +53,7 @@ export default function Navbar() {
                 animate='visible'
                 exit='hidden'
                 variants={menuVariants}
-                transition={{ type: 'tween', duration: 0.5 }}
+                transition={{ type: 'tween', duration: 0.3 }}
                 className='rounded-l-3xl fixed z-40 top-0 right-0 w-3/4 h-full bg-black border text-white'
               >
                 <section className='flex flex-col space-y-10 p-10 mt-10 text-3xl font-silkscreen'>

@@ -1,19 +1,39 @@
 import React from 'react';
+import Image from 'next/image';
 import { motion } from "motion/react";
 
 export default function Landing() {
-	return (
-		<motion.section
-			initial={{ opacity: 0, y:100 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.7 }}
-
-			className="h- w-11/12 mx-auto flex items-center justify-center font-silkscreen border-2 rounded-2xl"
-		>
-			<div className="text-center">
-				<h1 className="text-4xl font-bold">Hi i'm</h1>
-				<p className="text-lg">Sanan</p>
-			</div>
-		</motion.section>
-	);
-};
+  return (
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      className="h-fit py-10 w-11/12 mx-auto flex flex-row items-center justify-center md:items-start font-silkscreen text-center md:text-left"
+    >
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+      >
+        <h1 className="text-4xl md:text-7xl text-white">
+          Hi
+          <motion.div
+            className="w-fit inline-block"
+            animate={{ rotate: [0, 20, -20, 0] }}
+            transition={{ repeat: Infinity, repeatDelay: 2 }}
+          >
+            👋🏽
+          </motion.div>
+        </h1>
+        <Image src={"/sanan1.jpg"} className='mx-auto rounded-full mt-4 md:hidden' alt="Portrait" width={200} height={200} />
+        <h2 className="text-4xl md:text-5xl text-white mt-4">
+          I'm <span className='underline'>Sanan Maarouf</span>
+        </h2>
+        <h3 className="text-2xl md:text-3xl text-gray-400 mt-2">
+          Developer based in <br/> Oslo, Norway
+        </h3>
+      </motion.div>
+			<Image src={"/sanan1.jpg"} className='hidden md:block rounded-full ml-6' alt="Portrait" width={200} height={200} />
+    </motion.section>
+  );
+}

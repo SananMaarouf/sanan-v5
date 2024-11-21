@@ -1,4 +1,5 @@
 import Landing from "../components/landing";
+import Projects from "../components/projects";
 import { motion } from "framer-motion";
 export default function Home() {
   return (
@@ -8,7 +9,9 @@ export default function Home() {
       transition={{ duration: 1 }}
       className="flex flex-col ">
       {/* landing section */}
-      <Landing/>      
+      <Landing/>    
+      {/* projects section */}  
+      <Projects/>
     </motion.main>
   );
 }

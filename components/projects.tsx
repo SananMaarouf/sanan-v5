@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import CarouselCard from "@/components/carouselCard";
 import { Card } from "./ui/card";
@@ -16,12 +16,12 @@ const arrowMotion = {
     x: 30,
     transition: {
       duration: 0.1,
-    }
+    },
+
   }
 };
 const textMotion = {
   rest: {
-    scale: 1,
     opacity: 1,
     transition: {
       duration: 0.1,
@@ -31,7 +31,10 @@ const textMotion = {
     scale: 1.3,
     transition: {
       duration: 0.1,
-    }
+    },
+  tap:{
+    scale: 0.9
+  }
   }
 };
 
@@ -44,9 +47,12 @@ export default function Projects() {
   ];
 
   return (
-    <section className="mx-16 my-10 md:mx-40 font-silkscreen">
+    <AnimatePresence>
+
+    <motion.section className="mx-16 my-10 md:mx-40 font-silkscreen">
       <h1 className="text-xl mb-2">Projects</h1>
       <Carousel>
+        {/* TODO fix something making the  */}
         <CarouselPrevious className="" />
         <CarouselNext className="" />
         <CarouselContent>
@@ -62,7 +68,8 @@ export default function Projects() {
             </CarouselItem>
           ))}
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <motion.div initial="rest" whileHover="hover" animate="rest" className="w-full h-full">
+          <AnimatePresence initial={false}>
+            <motion.div initial="rest" whileHover="hover" whileTap="tap" animate="rest" className="w-full h-full">
               <Card className="bg-white w-full h-full">
                 <Link href="/projects" className="flex justify-center h-full items-center">
                   <motion.h1 variants={textMotion} className="text-2xl">View all</motion.h1>
@@ -72,9 +79,11 @@ export default function Projects() {
                 </Link>
               </Card>
             </motion.div>
+          </AnimatePresence>
           </CarouselItem>
         </CarouselContent>
       </Carousel>
-    </section>
+    </motion.section>
+                </AnimatePresence>
   );
 }

@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 export default function Footer() {
   return (
     <motion.footer
-      className="h-1/2 bg-transparent text-white flex items-center justify-center font-silkscreen"
+      className="h-30 border bg-transparent text-white flex items-center justify-center font-silkscreen"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}

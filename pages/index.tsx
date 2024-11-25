@@ -12,6 +12,7 @@ export default function Home() {
       <Landing/>    
       {/* projects section */}  
       <Projects/>
+      
     </motion.main>
   );
 }

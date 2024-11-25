@@ -47,14 +47,9 @@ export default function Projects() {
   ];
 
   return (
-    <AnimatePresence>
-
-    <motion.section className="mx-16 my-10 md:mx-40 font-silkscreen">
+    <motion.section className="border mx-16 my-10 md:mx-40 font-silkscreen">
       <h1 className="text-xl mb-2">Projects</h1>
       <Carousel>
-        {/* TODO fix something making the  */}
-        <CarouselPrevious className="" />
-        <CarouselNext className="" />
         <CarouselContent>
           {projects.map((project, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
@@ -63,14 +58,12 @@ export default function Projects() {
                 alt={project.alt}
                 title={project.title}
                 description={project.description}
-                bgColor={"bg-white"}
               />
             </CarouselItem>
           ))}
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-          <AnimatePresence initial={false}>
+          {<CarouselItem className="md:basis-1/2 lg:basis-1/3">
             <motion.div initial="rest" whileHover="hover" whileTap="tap" animate="rest" className="w-full h-full">
-              <Card className="bg-white w-full h-full">
+              <Card className="bg-white  w-full h-full">
                 <Link href="/projects" className="flex justify-center h-full items-center">
                   <motion.h1 variants={textMotion} className="text-2xl">View all</motion.h1>
                   <motion.span variants={arrowMotion} className="focus:outline-none z-50">
@@ -79,11 +72,11 @@ export default function Projects() {
                 </Link>
               </Card>
             </motion.div>
-          </AnimatePresence>
-          </CarouselItem>
+          </CarouselItem>}
         </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
       </Carousel>
     </motion.section>
-                </AnimatePresence>
   );
 }

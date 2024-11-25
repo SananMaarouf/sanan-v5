@@ -10,9 +10,9 @@ interface CarouselCardProps {
   bgColor?: string;
 }
 
-const CarouselCard: React.FC<CarouselCardProps> = ({ src, alt, title, description, bgColor }) => {
+const CarouselCard: React.FC<CarouselCardProps> = ({ src, alt, title, description }) => {
   return (
-    <Card className={`${bgColor}`}>
+    <Card className="border-red-500 border-2 p-0" >
       <Image
         src={src}
         alt={alt}

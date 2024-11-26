@@ -38,20 +38,20 @@ export default function Toolbox() {
       className="
         rounded-xl mx-auto  
         flex flex-col items-center 
-        font-silkscreen w-3/4
+        font-silkscreen w-full
         my-10
         md:items-start
         " 
     >
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.5 }}>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.5 }} className="w-full">
         <h2 className="text-3xl mb-2 md:text-4xl">Technologies i know and love</h2>
         <div className="text-xl md:text-2xl flex flex-col">
           <div >
             <h3 className="underline decoration-2">Backend:</h3>
             {/* many small cards with icon of said technology and it's name */}
-            <div className="flex gap-4 p-2 flex-wrap text-sm md:text-lg">
+            <div className="flex gap-4 p-2 flex-wrap text-sm md:text-lg ">
               {backend.map((tech, index) => (
-                <motion.div whileHover={{scale:1.1, rotate:-2, }} key={index} className="flex flex-col items-center justify-center border-2 w-36 h-32 rounded-2xl p-2">
+                <motion.div whileHover={{scale:1.1, rotate:-2, }} key={index} className="mx-auto md:mx-1 flex flex-col items-center justify-center border-2 w-36 h-32 rounded-2xl p-2">
                   <img src={tech.src} alt={tech.alt} className="w-16 h-16" />
                   <p>{tech.title}</p>
                 </motion.div>
@@ -63,7 +63,7 @@ export default function Toolbox() {
             {/* many small cards with icon of said technology and it's name */}
             <div className="flex gap-4 p-2 flex-wrap text-sm md:text-lg">
               {frontend.map((tech, index) => (
-                <motion.div whileHover={{scale:1.1, rotate:2}} key={index} className="flex flex-col items-center justify-center border-2 w-36 h-32 rounded-2xl p-2">
+                <motion.div whileHover={{scale:1.1, rotate:2}} key={index} className="mx-auto md:mx-1 flex flex-col items-center justify-center border-2 w-36 h-32 rounded-2xl p-2">
                   <img src={tech.src} alt={tech.alt} className="w-16 h-16" />
                   <p>{tech.title}</p>
                 </motion.div>
@@ -76,7 +76,7 @@ export default function Toolbox() {
             {/* many small cards with icon of said technology and it's name */}
             <div className="flex gap-4 p-2 flex-wrap text-sm md:text-lg">
               {databases.map((tech, index) => (
-                <motion.div whileHover={{scale:1.1, rotate:-2}} key={index} className="flex flex-col items-center text-center justify-center border-2 w-36 h-32 rounded-2xl p-2">
+                <motion.div whileHover={{scale:1.1, rotate:-2}} key={index} className="mx-auto md:mx-1 flex flex-col items-center text-center justify-center border-2 w-36 h-32 rounded-2xl p-2">
                   <img src={tech.src} alt={tech.alt} className="w-16 h-16" />
                   <p>{tech.title}</p>
                 </motion.div>

@@ -9,7 +9,14 @@ export default function Landing() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="h-96 py-24 mb-40 md:my-20 w-11/12 mx-auto flex flex-row items-center justify-center font-silkscreen md:items-start text-center md:text-left"
+      className="
+        mt-10 mb-28
+        h-96 py-24 
+        w-11/12 mx-auto 
+        flex flex-row 
+        items-center justify-center 
+        font-silkscreen text-center 
+        md:mt-10 md:items-start md:text-left"
     >
       <motion.div
         initial={{ opacity: 0 }}

@@ -21,11 +21,11 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ src, alt, title, descriptio
         objectFit="cover"
         className="rounded-xl w-full h-full"      />
       <CardContent>
-        <h3 className="font-silkscreen">{title}</h3>
-        <p>{description}</p>
+        <h3 className="font-silkscreen text-2xl">{title}</h3>
+        <p className="text-2xl">{description}</p>
       </CardContent>
       <CardFooter className="hover:underline hover:underline-offset-2 decoration-2">
-        <button className="btn btn-primary">View Project</button>
+        <button className="btn btn-primary text-xl">View Project</button>
       </CardFooter>
     </Card>
   );

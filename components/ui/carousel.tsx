@@ -182,8 +182,8 @@ const CarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
-        "shrink-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        "shrink-0 grow-0 basis-full max-w-96 border-2 md:max-w-80",
+        orientation === "horizontal" ? "pt-0" : "pt-4",
         className
       )}
       {...props}

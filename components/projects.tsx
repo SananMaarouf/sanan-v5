@@ -14,9 +14,9 @@ const arrowMotion = {
     }
   },
   hover: {
-    x: 30,
+    x: 10,
     transition: {
-      duration: 0.1,
+      duration: 0.2,
     },
   }
 };
@@ -64,12 +64,13 @@ export default function Projects() {
         initial={{ opacity: 0, y: 200 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="mx-2 my-10 md:mx-20 font-silkscreen">
-        <h1 className="text-3xl mb-2">Projects</h1>
-        <Carousel className="">
-          <CarouselContent className="pl-4 gap-5">
+        className="mx-2 my-10 md:mx-0 font-silkscreen relative">
+        <h1 className="text-3xl mb-2 lg:mx-20">Projects</h1>
+        <motion.p animate={{scale:[1,1.1,1]}} transition={{repeat: 10, duration:2}} className="block lg:hidden absolute right-2 top-2">swipe ➡️</motion.p>
+        <Carousel className="w-full pl-2 lg:pl-20">
+          <CarouselContent className="pl-4 md:p-4 gap-6 md:gap-5 lg:w-full">
             {projects.map((project, index) => (
-              <CarouselItem key={index} className="w-full bg-white h-96 md:basis-2/5 rounded-xl">
+              <CarouselItem key={index} className="w-full bg-white h-96 md:basis-56 rounded-xl">
                 <Link href={project.url} className=" text-black w-full h-full cursor-grab active:cursor-grabbing flex flex-col">
                   <Image
                     src={project.src}
@@ -85,7 +86,7 @@ export default function Projects() {
                 </Link>
               </CarouselItem>
             ))}
-            <CarouselItem className="w-full md:basis-1/3 h-96 rounded-xl">
+            <CarouselItem className="w-full md:basis-56 rounded-xl">
               <motion.div
                 initial="rest"
                 whileHover="hover"

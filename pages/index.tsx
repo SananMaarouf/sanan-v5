@@ -9,10 +9,11 @@ export default function Home() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="flex flex-col ">
-      {/* landing section */}
+      {/* Landing */}
       <Landing/>    
-      {/* projects section */}  
+      {/* Projects */}  
       <Projects/>
+      {/* Technologies */}
       <Toolbox/>
     </motion.main>
   );

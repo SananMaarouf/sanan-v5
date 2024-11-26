@@ -52,9 +52,9 @@ export default function Projects() {
   }, [isInView])
 
   const projects = [
-    { url: "/", src: "/applitrack.png", alt: "Applitrack", title: "O1", description: "Applitrack" },
-    { url: "/", src: "/applitrack.png", alt: "Partner SOS", title: "O2", description: "Partner-SOS" },
-    { url: "/", src: "/applitrack.png", alt: "Artist portfolio", title: "O3", description: "Artist portfolio" }
+    { url: "/", src: "/projects/applitrack.png", alt: "Applitrack", title: "O1", description: "Applitrack" },
+    { url: "/", src: "/projects/applitrack.png", alt: "Partner SOS", title: "O2", description: "Partner-SOS" },
+    { url: "/", src: "/projects/applitrack.png", alt: "Artist portfolio", title: "O3", description: "Artist portfolio" }
   ];
 
   return (

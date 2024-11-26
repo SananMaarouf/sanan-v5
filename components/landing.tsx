@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { motion } from "motion/react";
 
 export default function Landing() {
+  
   return (
     <motion.section
       initial={{ opacity: 0, y: 100 }}
@@ -15,7 +16,7 @@ export default function Landing() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
       >
-        <h1 className="text-4xl md:text-7xl text-white">
+        <h1 className="text-4xl md:text-5xl text-white">
           Hi
           <motion.div
             className="w-fit inline-block"

@@ -1,5 +1,5 @@
 import Landing from "../components/landing";
-import Projects from "../components/projects";
+import ProjectsCarousel from "../components/projectsCarousel";
 import Toolbox from "@/components/toolbox";
 import { motion } from "framer-motion";
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       {/* Landing */}
       <Landing/>    
       {/* Projects */}  
-      <Projects/>
+      <ProjectsCarousel/>
       {/* Technologies */}
       <Toolbox/>
     </motion.main>

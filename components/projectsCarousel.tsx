@@ -39,7 +39,7 @@ const textMotion = {
   }
 };
 
-export default function Projects() {
+export default function ProjectsCarousel() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "0px 0px -200px 0px" })
 

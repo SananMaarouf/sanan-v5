@@ -1,13 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import ApplitrackSVG from '@/components/projectSVG/applitrackSVG';
-import PartnersosSVG from '@/components/projectSVG/partnersosSVG';
-import SanplanSVG from '@/components/projectSVG/sanplanSVG';
-import SaraSVG from '@/components/projectSVG/saraSVG';
-import InsultifierSVG from '@/components/projectSVG/insultifierSVG';
-import GreentalkSVG from '@/components/projectSVG/greentalkSVG';
-import MoviematchSVG from '@/components/projectSVG/moviematchSVG';
+import Image from 'next/image';
 
 const containerVariants = {
     hidden: { opacity: 1 },
@@ -30,43 +24,43 @@ export default function Projects() {
         {
             title: 'Applitrack',
             description: "Job application tracker",
-            image: <ApplitrackSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
+            image: '/projects/applitrack.png',
             url: '/projects/applitrack'
         },
         {
             title: 'PartnerSOS',
             description: "Violence alarm via SMS",
-            image: <PartnersosSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
+            image: '/projects/psos.png',
             url: '/projects/partnersos'
         },
         {
             title: 'SanPlan',
             description: "Todo list app",
-            image: <SanplanSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
+            image: '/projects/sanplan.png',
             url: '/projects/sanplan'
         },
         {
             title: 'Sarazamecznik.com',
             description: "Client portfolio page",
-            image: <SaraSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
+            image: '/projects/zamec.png',
             url: '/projects/sara'
         },
         {
             title: 'Insultifier',
             description: "Insultifies text",
-            image: <InsultifierSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
+            image: '/projects/insultifier.webp',
             url: '/projects/insultifier'
         },
         {
             title: 'Greentalk',
             description: "Forum for environmentalists",
-            image: <GreentalkSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
+            image: '/projects/greentalk.png',
             url: '/projects/greentalk'
         },
         {
             title: 'MovieMatch',
             description: "App for movie nights",
-            image: <MoviematchSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
+            image: '/projects/moviematch.png',
             url: '/projects/moviematch'
         },
     ];
@@ -92,7 +86,7 @@ export default function Projects() {
                     lg:gap-y-4
                     font-silkscreen
                     ">
-                {/* projects cards. programatically created by mapping over them */}
+                {/* projects cards. programmatically created by mapping over them */}
                 {projects.map((project, index) => (
                     <Link key={index} href={project.url}>
                         <motion.div
@@ -115,13 +109,19 @@ export default function Projects() {
                                 flex-col 
                                 md:w-full
                                 rounded-lg 
-                                overflow-clip 
+                                overflow-hidden 
                                 border
                                 border-white 
                                 '>
-                                <div className='w-full h-3/4 content-center overflow-clip flex items-center lg:pt-20'>
-                                    {project.image}
-                                </div>
+                            <div className='w-full h-3/4 relative'>
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="rounded-t-lg"
+                                />
+                            </div>
                             <div className='h-1/4 px-4'>
                                 <h2 className='text-xl font-semibold'>{project.title}</h2>
                                 <p className='text-md'>{project.description}</p>

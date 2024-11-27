@@ -1,7 +1,6 @@
 import React, { use } from "react";
 import { motion, AnimatePresence, useAnimate, useInView } from "motion/react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import PartnersosSVG from "./projectSVG/partnersosSVG";
 import { Card } from "./ui/card";
 import Link from "next/link";
 import Image from "next/image";
@@ -53,9 +52,9 @@ export default function ProjectsCarousel() {
   }, [isInView])
 
   const projects = [
-    { url: "/", src: "partnersos.svg", alt: "Partner SOS", title: "O2", description: "Partner-SOS" },
-    { url: "/", src: "/artist.svg", alt: "Artist portfolio", title: "O3", description: "Artist portfolio" },
     { url: "/", src: "/projects/applitrack.png", alt: "Applitrack", title: "O1", description: "Applitrack" },
+    { url: "/", src: "/projects/psos.png", alt: "Partner SOS", title: "O2", description: "Partner-SOS" },
+    { url: "/", src: "/projects/zamec.png", alt: "Artist portfolio", title: "O3", description: "Artist portfolio" },
   ];
 
   return (
@@ -68,6 +67,7 @@ export default function ProjectsCarousel() {
         className="mx-2 my-10 md:mx-0 font-silkscreen relative">
         <h1 className="text-3xl mb-2 lg:mx-20">Projects</h1>
         <motion.p animate={{scale:[1,1.1,1]}} transition={{repeat: 10, duration:2}} className="block lg:hidden absolute right-2 top-2">swipe ➡️</motion.p>
+        {/* carousel */}
         <Carousel className="w-full pl-2 lg:pl-20">
           <CarouselContent className="pl-4 md:p-4 gap-6 md:gap-5 lg:w-full">
             {projects.map((project, index) => (
@@ -78,7 +78,7 @@ export default function ProjectsCarousel() {
                     alt={project.alt}
                     width={400}
                     height={400}
-                    className="rounded-xl object-cover md:object-center  flex-shrink-0 flex-grow-0 w-full h-60" />
+                    className="rounded-xl object-none md:object-cover h-60 md:h-52" />
                   <div className="p-4 flex-grow">
                     <h2 className="text-2xl">{project.title}</h2>
                     <p className="text-2xl">{project.description}</p>

@@ -37,7 +37,7 @@ export default function Landing() {
         <h2 className="text-4xl md:text-5xl text-white mt-4">
           I'm <span className='underline'>Sanan Maarouf</span>
         </h2>
-        <h3 className="text-2xl md:text-3xl text-gray-400 mt-2">
+        <h3 className="text-2xl md:text-3xl text-gray-300 mt-2">
           Developer based in <br/> Oslo, Norway
         </h3>
       </motion.div>

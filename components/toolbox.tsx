@@ -73,7 +73,7 @@ export default function Toolbox() {
                     md:mx-1 
                     flex flex-col 
                     items-center justify-center 
-                    border-2 rounded-2xl p-2
+                    border-2 border-gray-500 hover:border-white hover:border-white rounded-2xl p-2
                     w-24 h-24
                     md:w-28 md:h-28 
                   ">
@@ -102,7 +102,7 @@ export default function Toolbox() {
                     md:mx-1 
                     flex flex-col 
                     items-center justify-center 
-                    border-2 rounded-2xl p-2
+                    border-2 border-gray-500 hover:border-white rounded-2xl p-2
                     w-24 h-24
                     md:w-28 md:h-28 
                   ">
@@ -131,7 +131,7 @@ export default function Toolbox() {
                     md:mx-1 
                     flex flex-col 
                     items-center justify-center 
-                    border-2 rounded-2xl p-2
+                    border-2 border-gray-500 hover:border-white rounded-2xl p-2
                     w-24 h-24
                     md:w-28 md:h-28 
                   ">

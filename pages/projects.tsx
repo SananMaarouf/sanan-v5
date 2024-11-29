@@ -57,12 +57,6 @@ export default function Projects() {
             image: '/projects/greentalk.png',
             url: '/projects/greentalk'
         },
-        {
-            title: 'MovieMatch',
-            description: "App for movie nights",
-            image: '/projects/moviematch.png',
-            url: '/projects/moviematch'
-        },
     ];
 
     return (

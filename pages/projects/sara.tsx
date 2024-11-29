@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 
-
+/*  TODO copy over images from v-4 to v-5 */
 const images = [
     {
         title: 'Index',

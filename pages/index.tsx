@@ -1,7 +1,7 @@
 import Landing from "../components/landing";
 import ProjectsCarousel from "../components/projectsCarousel";
 import Toolbox from "@/components/toolbox";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 export default function Home() {
   return (
     <motion.main

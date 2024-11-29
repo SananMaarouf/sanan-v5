@@ -52,9 +52,9 @@ export default function ProjectsCarousel() {
   }, [isInView])
 
   const projects = [
-    { url: "/", src: "/projects/applitrack.png", alt: "Applitrack", title: "O1", description: "Applitrack" },
-    { url: "/", src: "/projects/psos.png", alt: "Partner SOS", title: "O2", description: "Partner-SOS" },
-    { url: "/", src: "/projects/zamec.png", alt: "Artist portfolio", title: "O3", description: "Artist portfolio" },
+    { url: "/projects/applitrack", src: "/projects/applitrack.png", alt: "Applitrack", title: "O1", description: "Applitrack" },
+    { url: "/projects/partnersos", src: "/projects/psos.png", alt: "Partner SOS", title: "O2", description: "Partner-SOS" },
+    { url: "/projects/sara", src: "/projects/zamec.png", alt: "Artist portfolio", title: "O3", description: "Artist portfolio" },
   ];
 
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, AnimatePresence, useInView } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Card } from "./ui/card";
 import Link from "next/link";
@@ -41,7 +41,6 @@ const textMotion = {
 
 export default function ProjectsCarousel() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "0px 0px -200px 0px" })
 
   const projects = [
     { url: "/projects/applitrack", src: "/projects/applitrack.png", alt: "Applitrack", title: "O1", description: "Applitrack" },

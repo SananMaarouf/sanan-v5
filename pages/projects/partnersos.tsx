@@ -105,7 +105,7 @@ export default function PartnerSOS() {
 						<CarouselPrevious />
 						<CarouselContent>
 							{images.map((image, index) => (
-								<CarouselItem  key={index} className="md:basis-1/2 lg:basis-1/3">
+								<CarouselItem  key={index} className="md:basis-1/2 lg:basis-2/5">
 									<Image src={image.image} alt={image.title} width={200} height={100} className="mx-auto" />
 								</CarouselItem>
 							))}

@@ -11,7 +11,7 @@ export default function Footer() {
     >
       <div className="text-center">
         <p className="text-lg">
-          &copy; {new Date().getFullYear()} Sanan Maarouf. All rights reserved.
+          &copy; {new Date().getFullYear()} Sanan Maarouf
         </p>
       </div>
     </motion.footer>

@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "motion/react";
 import Link from 'next/link';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 const menuVariants = {
   hidden: { opacity: 0, x: 100 },
@@ -75,9 +83,33 @@ export default function Navbar() {
                     </Link>
                   </motion.div>
                   <motion.div variants={itemVariants}>
-                    <Link onClick={toggleMenu} href="/contact" className='hover:underline underline-offset-2'>
+                    {/* <Link onClick={toggleMenu} href="/contact" className='hover:underline underline-offset-2'>
                       Contact
-                    </Link>
+                    </Link> */}
+                    <Dialog>
+                      <DialogTrigger className='font-silkscreen'>Contact</DialogTrigger>
+                      <DialogContent className='font-silkscreen'>
+                        <DialogHeader>
+                          <DialogTitle>Find me on these platforms</DialogTitle>
+                          <DialogDescription className='flex gap-4'>
+                            <Link
+                              href="https://www.linkedin.com/in/sanan-maarouf/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className='border-2 rounded-md p-4 hover:bg-slate-50 hover:text-black'>
+                              LinkedIn
+                            </Link>
+                            <Link
+                              href="https://github.com/SananMaarouf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className='border-2 rounded-md p-4 hover:bg-slate-50 hover:text-black'>
+                              Github
+                            </Link>
+                          </DialogDescription>
+                        </DialogHeader>
+                      </DialogContent>
+                    </Dialog>
                   </motion.div>
                 </section>
               </motion.section>
@@ -104,7 +136,30 @@ export default function Navbar() {
           <Link href="/projects">Projects</Link>
         </motion.li>
         <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline underline-offset-4">
-          <Link href="/contact">Contact</Link>
+          <Dialog>
+            <DialogTrigger>Contact</DialogTrigger>
+            <DialogContent className='font-silkscreen'>
+              <DialogHeader>
+                <DialogTitle>Find me on these platforms</DialogTitle>
+                <DialogDescription className='flex flex-col md:flex-row gap-4'>
+                  <Link
+                    href="https://www.linkedin.com/in/sanan-maarouf/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='border-2 rounded-md p-3 hover:bg-slate-50 hover:text-black'>
+                    LinkedIn
+                  </Link>
+                  <Link
+                    href="https://github.com/SananMaarouf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='border-2 rounded-md p-3 hover:bg-slate-50 hover:text-black'>
+                    Github
+                  </Link>
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
         </motion.li>
       </ul>
     </motion.nav>

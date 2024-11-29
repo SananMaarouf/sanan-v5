@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 
-/*  TODO copy over images from v-4 to v-5 */
 const images = [
     {
         title: 'Index',
@@ -79,12 +78,24 @@ export default function Sara() {
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                        I reached out to Sara and presented an offer she couldn't refuse. I had the freedom to use any technologies I preferred, with her only requirement being a design that is minimal, mobile-friendly, and cost-effective to host.
+                        I reached out to Sara and presented an offer she could not refuse. 
+                        I had the freedom to use any technologies I preferred, 
+                        with her only requirement being a design that is minimal, mobile-friendly, and cost-effective to host.
                     </p>
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                        "With these criteria in mind, I set out to find a suitable tech stack. I instantly thought of using a CMS such as Wordpress or Squarespace for their ease of use and are easy to maintain. While CMS-platforms like WordPress or Squarespace are popular for their user friendlyness, they come at a literal cost. Luckily there are more cost effective alternatives. Given the nature of the site, all off the content could be static and only need to be updated when she makes a new post. Here is where static site generators(SSG) and headless-CMS systems come in. By utilizing SSGs, such as Next.js, to fetch content from the headless CMS, in this case, Contentful, I could generate a static webpage. This approach is ideal for achieving a custom UI design and allows for easy hosting on Vercel, free of charge. It also enables non-coders to create content through a user-friendly CMS interface, triggering automatic webpage rebuilding via webhooks.
+                        With these criteria in mind, I set out to find a suitable tech stack. 
+                        I instantly thought of using a CMS such as Wordpress or Squarespace for their ease of use and are easy to maintain. 
+                        While CMS-platforms like WordPress or Squarespace are popular for their user friendlyness, they come at a literal cost. 
+                        Luckily there are more cost effective alternatives. 
+                        Given the nature of the site, all off the content could be static and only need to be updated when she makes a new post. 
+                        Here is where static site generators(SSG) and headless-CMS systems come in. 
+                        By utilizing SSGs, such as Next.js, to fetch content from the headless CMS, in this case, 
+                        Contentful, I could generate a static webpage. 
+                        This approach is ideal for achieving a custom UI design and allows for easy hosting on Vercel, free of charge. 
+                        It also enables non-coders to create content through a user-friendly CMS interface, 
+                        triggering automatic webpage rebuilding via webhooks.
                     </p>
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">

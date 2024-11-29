@@ -1,10 +1,10 @@
-import React, { use } from "react";
-import { motion, AnimatePresence, useAnimate, useInView } from "motion/react";
+import React from "react";
+import { motion, AnimatePresence, useInView } from "motion/react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Card } from "./ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 const arrowMotion = {
   rest: {
@@ -42,14 +42,6 @@ const textMotion = {
 export default function ProjectsCarousel() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "0px 0px -200px 0px" })
-
-  useEffect(() => {
-    if (isInView) {
-      console.log("Element is in view: ", isInView)
-    } else {
-      console.log("Element is not in view: ", isInView)
-    }
-  }, [isInView])
 
   const projects = [
     { url: "/projects/applitrack", src: "/projects/applitrack.png", alt: "Applitrack", title: "O1", description: "Applitrack" },

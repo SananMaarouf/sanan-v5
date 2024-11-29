@@ -35,7 +35,7 @@ export default function Landing() {
         </h1>
         <Image src={"/sanan1.jpg"} className='mx-auto rounded-full mt-4 md:hidden' alt="Portrait" width={200} height={200} />
         <h2 className="text-4xl md:text-5xl text-white mt-4">
-          I'm <span className='underline'>Sanan Maarouf</span>
+          I&apos;m <span className='underline'>Sanan Maarouf</span>
         </h2>
         <h3 className="text-2xl md:text-3xl text-gray-300 mt-2">
           Developer based in <br/> Oslo, Norway

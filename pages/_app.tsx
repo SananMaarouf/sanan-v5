@@ -12,19 +12,23 @@ const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 const andadaPro = Andada_Pro({ subsets: ["latin"], weight: "600" });
 
 export default function App({ Component, pageProps }: AppProps) {
-	return (
-		<>
-			<style jsx global>{`
-				.font-oi { font-family: ${oi.style.fontFamily}; }
-				.font-modak { font-family: ${modak.style.fontFamily}; }
-				.font-climate { font-family: ${climateCrisis.style.fontFamily}; }
-				.font-silkscreen { font-family: ${silkscreen.style.fontFamily}; }
-				.font-roboto { font-family: ${roboto.style.fontFamily}; }
-				.font-andada { font-family: ${andadaPro.style.fontFamily}; }
-			`}</style>
-			<Navbar />
-			<Component {...pageProps} />
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <style jsx global>{`
+        .font-oi { font-family: ${oi.style.fontFamily}; }
+        .font-modak { font-family: ${modak.style.fontFamily}; }
+        .font-climate { font-family: ${climateCrisis.style.fontFamily}; }
+        .font-silkscreen { font-family: ${silkscreen.style.fontFamily}; }
+        .font-roboto { font-family: ${roboto.style.fontFamily}; }
+        .font-andada { font-family: ${andadaPro.style.fontFamily}; }
+      `}</style>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          <Component {...pageProps} />
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
 }

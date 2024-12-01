@@ -1,10 +1,10 @@
 import React from "react";
-import { motion, AnimatePresence, useInView } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Card } from "./ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const arrowMotion = {
   rest: {

@@ -42,8 +42,8 @@ export default function Navbar() {
       transition={{ duration: 0.7, once: true }}
     >
       {/* link with cool font */}
-      <motion.section whileHover={{ scale: 1.1, rotate: -10 }}>
-        <Link href='/' className='text-5xl font-silkscreen'>SM </Link>
+      <motion.section whileHover={{ scale: 1.1, rotate: -10, style:{color:""} }}>
+        <Link href='/' className='text-5xl font-silkscreen hover:text-orange-500'>SM </Link>
       </motion.section>
 
       {/* mobile navbar */}
@@ -70,7 +70,7 @@ export default function Navbar() {
                       <span>Resume</span>
                       {/* download svg icon */}
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-download">
+                        strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                         <polyline points="7 10 12 15 17 10" />
                         <line x1="12" x2="12" y1="15" y2="3" />
@@ -121,39 +121,39 @@ export default function Navbar() {
       {/* desktop navbar */}
       <ul className="hidden justify-end w-full md:flex font-silkscreen">
         <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline underline-offset-4">
-          <a download href="/files/cv_en.pdf" className=' flex items-center space-x-2'>
+          <a download href="/files/cv_en.pdf" className=' flex items-center space-x-2 hover:text-orange-400 '>
             <span>Resume</span>
             {/* download svg icon */}
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-download">
+              strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" x2="12" y1="15" y2="3" />
             </svg>
           </a>
         </motion.li>
-        <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline underline-offset-4">
+        <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline hover:text-orange-400 underline-offset-4">
           <Link href="/projects">Projects</Link>
         </motion.li>
         <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline underline-offset-4">
           <Dialog>
-            <DialogTrigger>Contact</DialogTrigger>
+            <DialogTrigger className='hover:text-orange-500'>Contact</DialogTrigger>
             <DialogContent className='font-silkscreen'>
               <DialogHeader>
-                <DialogTitle>Find me on these platforms</DialogTitle>
+                <DialogTitle className=''>Find me on these platforms</DialogTitle>
                 <DialogDescription className='flex flex-col md:flex-row gap-4'>
                   <Link
                     href="https://www.linkedin.com/in/sanan-maarouf/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='border-2 rounded-md p-3 hover:bg-slate-50 hover:text-black'>
+                    className='text-xl font-bold border-2 rounded-md p-3 bg-orange-700 hover:bg-orange-600  '>
                     LinkedIn
                   </Link>
                   <Link
                     href="https://github.com/SananMaarouf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='border-2 rounded-md p-3 hover:bg-slate-50 hover:text-black'>
+                    className='text-xl font-bold border-2 rounded-md p-3 bg-orange-700 hover:bg-orange-600'>
                     Github
                   </Link>
                 </DialogDescription>

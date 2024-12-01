@@ -36,7 +36,7 @@ export default function Applitrack() {
                 </div>
 
                 <Image
-                    src={"/images/projects/applitrack/applitrack-dashboard.png"}
+                    src={"/images/applitrack/applitrack-dashboard.webp"}
                     alt={"applitrack"}
                     width={1000}
                     height={800}

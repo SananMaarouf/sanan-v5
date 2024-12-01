@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import { motion } from "motion/react";
+import { motion } from 'motion/react';
 
 export default function Landing() {
-  
   return (
     <motion.section
       initial={{ opacity: 0, y: 100 }}
@@ -13,10 +12,10 @@ export default function Landing() {
         mt-10 mb-28
         h-96 py-24 
         w-11/12 mx-auto 
-        flex flex-row 
+        flex flex-col md:flex-row 
         items-center justify-center 
         font-silkscreen text-center 
-        md:mt-10 md:items-start md:text-left"
+        md:mt-10 md:items-center md:text-left"
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -33,7 +32,7 @@ export default function Landing() {
             👋🏽
           </motion.div>
         </h1>
-        <Image src={"/sanan1.jpg"} className='mx-auto rounded-full mt-4 md:hidden' alt="Portrait" width={200} height={200} />
+        <Image src={"/sanan1.webp"} className='mx-auto rounded-full mt-4 md:hidden' alt="Portrait" width={200} height={200} />
         <h2 className="text-4xl md:text-5xl text-white mt-4">
           I&apos;m <span className='underline'>Sanan Maarouf</span>
         </h2>
@@ -41,7 +40,13 @@ export default function Landing() {
           Developer based in <br/> Oslo, Norway
         </h3>
       </motion.div>
-			<Image src={"/sanan1.jpg"} className='hidden md:block rounded-full ml-6' alt="Portrait" width={200} height={200} />
+      <motion.div
+       initial={{ opacity: 0, y: 100 }}
+       animate={{ opacity: 1, y: 0 }}
+       transition={{ delay: 0.5, duration: 0.5 }}
+     >
+        <Image src={"/sanan1.webp"} className='hidden md:block rounded-full ml-6' alt="Portrait" width={300} height={300} />
+      </motion.div>
     </motion.section>
   );
 }

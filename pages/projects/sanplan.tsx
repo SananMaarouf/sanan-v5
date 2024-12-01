@@ -6,7 +6,7 @@ import Image from "next/image";
 const images = [
     {
         title: 'Screenshot of the app',
-        image: '/images/projects/sanplan/index.png',
+        image: '/images/sanplan/index-1.webp',
     },
 
 ];
@@ -36,7 +36,7 @@ export default function Sanplan() {
                 relative
                 "
             >
-                <div className="absolute md:relative md:my-auto justify-end h-2/6 w-full flex flex-col px-4 py-6 z-10 bg-background ">
+                <div className="absolute md:relative bg-orange-600 md:bg-transparent md:my-auto justify-end h-2/6 w-full flex flex-col px-4 py-6 z-10 bg-background ">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl text-white">
                         SanPlan
                     </h1>
@@ -47,13 +47,13 @@ export default function Sanplan() {
                         March 5th, 2024
                     </p>
                 </div>
-                <div className="flex max-h-96 md:justify-end md:w-2/5 lg:w-1/2">
+                <div className="flex max-h-96 md:justify-end md:w-2/5 lg:w-1/2 overflow-clip">
                     <Image
                         src={images[0].image}
                         alt={images[0].title}
-                        width={600}
-                        height={800}
-                        className="w-full"
+                        width={800}
+                        height={1000}
+                        className="w-full max-w-md mx-auto"
                     />
                 </div>
             </motion.div>

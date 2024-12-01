@@ -8,7 +8,8 @@ const containerVariants = {
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.3
+            staggerChildren: 0.3,
+            
         }
     }
 };
@@ -24,25 +25,25 @@ export default function Projects() {
         {
             title: 'Applitrack',
             description: "Job application tracker",
-            image: '/projects/applitrack.png',
+            image: '/projects/applitrack.webp',
             url: '/projects/applitrack'
         },
         {
             title: 'PartnerSOS',
             description: "Violence alarm via SMS",
-            image: '/projects/psos.png',
+            image: '/projects/psos.webp',
             url: '/projects/partnersos'
         },
         {
             title: 'SanPlan',
             description: "Todo list app",
-            image: '/projects/sanplan.png',
+            image: '/projects/sanplan.webp',
             url: '/projects/sanplan'
         },
         {
             title: 'Sarazamecznik.com',
             description: "Client portfolio page",
-            image: '/projects/zamec.png',
+            image: '/projects/zamec.webp',
             url: '/projects/sara'
         },
         {
@@ -54,7 +55,7 @@ export default function Projects() {
         {
             title: 'Greentalk',
             description: "Forum for environmentalists",
-            image: '/projects/greentalk.png',
+            image: '/projects/greentalk.webp',
             url: '/projects/greentalk'
         },
     ];
@@ -66,6 +67,7 @@ export default function Projects() {
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
+                
                 className="
                     w-4/5
                     lg:w-3/4 
@@ -95,9 +97,9 @@ export default function Projects() {
                                 gap-1 
                                 flex 
                                 h-72 
-                                bg-white
-                                text-black
-                                pb-3 
+                                bg-orange-600 hover:bg-white
+                                text-white hover:text-orange-600
+                                pb-3 z-50
                                 w-full 
                                 mx-auto 
                                 flex-col 
@@ -107,16 +109,16 @@ export default function Projects() {
                                 border
                                 border-white 
                                 '>
-                            <div className='w-full h-3/4 relative'>
+                            <div className='w-full h-3/4 relative overflow-clip'>
                                 <Image
                                     src={project.image}
                                     alt={project.title}
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-t-lg"
+                                    width={500}
+                                    height={800}
+                                    className="rounded-t-lg object-fill"
                                 />
                             </div>
-                            <div className='h-1/4 px-4'>
+                            <div className='h-1/4 px-4 z-50'>
                                 <h2 className='text-xl font-semibold'>{project.title}</h2>
                                 <p className='text-md'>{project.description}</p>
                             </div>

@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 import { motion, AnimatePresence, useInView } from "motion/react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Card } from "./ui/card";

@@ -95,8 +95,8 @@ export default function Projects() {
                                 gap-1 
                                 flex 
                                 h-72 
-                                bg-white
-                                text-black
+                                bg-orange-600 hover:bg-white
+                                text-white hover:text-orange-600
                                 pb-3 
                                 w-full 
                                 mx-auto 

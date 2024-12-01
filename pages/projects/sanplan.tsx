@@ -7,7 +7,7 @@ import Image from "next/image";
 const images = [
     {
         title: 'Screenshot of the app',
-        image: '/images/projects/sanplan/index.png',
+        image: '/images/sanplan/index-1.webp',
     },
 
 ];

@@ -42,7 +42,7 @@ export default function Greentalk() {
                 </div>
 
                 <Image
-                    src={"/images/projects/greentalk/greentalk.jpg"}
+                    src={"/images/greentalk/greentalk.webp"}
                     alt={"spongebob"}
                     width={1000}
                     height={800}

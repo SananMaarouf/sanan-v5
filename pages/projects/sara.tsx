@@ -6,7 +6,7 @@ import Image from "next/image";
 const images = [
     {
         title: 'Index',
-        image: '/images/projects/sara/sara1.png',
+        image: '/images/sara/sara1.webp',
     },
 ];
 

@@ -13,27 +13,27 @@ import {
 const images = [
 	{
 		title: 'Login page',
-		image: '/images/projects/partnersos/login.png',
+		image: '/images/partnersos/login.webp',
 	},
 	{
 		title: 'Index',
-		image: '/images/projects/partnersos/index.png',
+		image: '/images/partnersos/index.webp',
 	},
 	{
 		title: 'Webapp map',
-		image: '/images/projects/partnersos/webmap.jpg',
+		image: '/images/partnersos/webmap.webp',
 	},
 	{
 		title: 'Partners page',
-		image: '/images/projects/partnersos/partners.png',
+		image: '/images/partnersos/partners.webp',
 	},
 	{
 		title: 'Profile page',
-		image: '/images/projects/partnersos/profile.png',
+		image: '/images/partnersos/profile.webp',
 	},
 	{
 		title: 'Settings page',
-		image: '/images/projects/partnersos/settings.png',
+		image: '/images/partnersos/settings.webp',
 	},
 ];
 
@@ -76,7 +76,7 @@ export default function PartnerSOS() {
                     </p>
 					</div>
 					<div className="">
-						<Image src="/images/projects/partnersos/phone.png" alt="Hero Image" width={500} height={500} className='' />
+						<Image src="/images/partnersos/phone.webp" alt="Hero Image" width={500} height={500} priority />
 					</div>
 				</div>
 			</motion.div>

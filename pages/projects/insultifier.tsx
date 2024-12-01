@@ -42,7 +42,7 @@ export default function Insultifier() {
                 </div>
 
                 <Image
-                    src={"/images/projects/insultifier/index.png"}
+                    src={"/images/insultifier/index.webp"}
                     alt={"spongebob"}
                     width={1000}
                     height={800}

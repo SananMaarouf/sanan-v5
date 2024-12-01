@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "motion/react";
-import Link from "next/link";
 import Image from "next/image";
 
 
@@ -57,7 +56,7 @@ export default function Greentalk() {
             >
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                    In our second year of university, we were tasked with creating a CRUD application for our semester assignment. After some time debating what kind of site and what it should be about, we landed on a forum for environmentalistssince global warming, climate change, and pollution are becoming bigger problems, we wanted to create a space where like minded people could communicate and start events to meet up.",
+                    In our second year of university, we were tasked with creating a CRUD application for our semester assignment. After some time debating what kind of site and what it should be about, we landed on a forum for environmentalistssince global warming, climate change, and pollution are becoming bigger problems, we wanted to create a space where like minded people could communicate and start events to meet up
                     </p>
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">

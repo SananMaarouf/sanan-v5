@@ -93,7 +93,7 @@ export default function PartnerSOS() {
 					when they feel unsafe. Unlike apps like Messenger or Snapchat, 
 					PartnerSOS requires only a single tap, ensuring a quick and efficient
 					notification process. Upon activation, the partner receives an SMS containing a link
-					to view the user's location via a web app. 
+					to view the user location via a web app. 
 					The location updates in real-time and can be accessed directly 
 					in Google Maps for precise navigation. 
 					This streamlined approach ensures that users can seek assistance quickly and 

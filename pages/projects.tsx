@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { form } from 'motion/react-m';
 
 const containerVariants = {
     hidden: { opacity: 1 },

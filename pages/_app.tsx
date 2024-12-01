@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Oi, Modak, Climate_Crisis, Silkscreen, Roboto, Andada_Pro, Alegreya } from "next/font/google";
+import { Oi, Modak, Climate_Crisis, Silkscreen, Roboto, Andada_Pro } from "next/font/google";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 

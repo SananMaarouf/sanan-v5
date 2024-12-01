@@ -78,7 +78,7 @@ export default function Toolbox() {
                     bg-neutral-100 hover:bg-orange-600  
                     text-orange-600 hover:text-white 
                     transition duration-75 hover:duration-150 ease-linear
-                    w-28 h-28
+                    w-24 h-24
                     md:w-28 md:h-28 
                   ">
                   <img src={tech.src} alt={tech.alt} className="w-10 h-10 md:w-12 md:h-12" />
@@ -111,7 +111,7 @@ export default function Toolbox() {
                     bg-white hover:bg-orange-600  
                     text-orange-600 hover:text-white 
                     transition duration-75 hover:duration-150 ease-linear 
-                    w-28 h-28
+                    w-24 h-24
                     md:w-28 md:h-24 
                   ">
                   <img src={tech.src} alt={tech.alt} className="w-12 h-12" />

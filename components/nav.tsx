@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "motion/react";
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import {
   Dialog,
   DialogContent,
@@ -9,7 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { useTranslation } from 'next-i18next';
+import { useTranslation, i18n } from 'next-i18next';
 
 
 const menuVariants = {
@@ -31,8 +32,19 @@ const itemVariants = {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const router = useRouter();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const switchLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+    router.push(router.pathname, router.asPath, { locale: lang });
+    setDropdownOpen(false);
+  };
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -45,7 +57,7 @@ export default function Navbar() {
       transition={{ duration: 0.7, once: true }}
     >
       {/* link with cool font */}
-      <motion.section whileHover={{ scale: 1.1, rotate: -10, style:{color:""} }}>
+      <motion.section whileHover={{ scale: 1.1, rotate: -10, style: { color: "" } }}>
         <Link href='/' className='text-5xl font-silkscreen hover:text-orange-500'>SM </Link>
       </motion.section>
 
@@ -53,9 +65,9 @@ export default function Navbar() {
       <div className="flex justify-end w-full md:hidden">
         <button onClick={toggleMenu} className="focus:outline-none z-50">
           {isOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" className='w-10 h-10 text-orange-600'><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" className='w-10 h-10 text-orange-600'><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" className='w-10 h-10 text-orange-600'><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" className='w-10 h-10 text-orange-600'><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
           )}        </button>
         <AnimatePresence>
           {isOpen && (
@@ -83,15 +95,14 @@ export default function Navbar() {
                       </svg>
                     </a>
                   </motion.div>
+
                   <motion.div variants={itemVariants}>
                     <Link onClick={toggleMenu} href="/projects" className='hover:underline underline-offset-2 hover:text-orange-600'>
                       {t("nav.projects")}
                     </Link>
                   </motion.div>
+
                   <motion.div variants={itemVariants}>
-                    {/* <Link onClick={toggleMenu} href="/contact" className='hover:underline underline-offset-2'>
-                      Contact
-                    </Link> */}
                     <Dialog>
                       <DialogTrigger className='font-silkscreen hover:text-orange-600'>{t("nav.contact")}</DialogTrigger>
                       <DialogContent className='font-silkscreen'>
@@ -116,6 +127,42 @@ export default function Navbar() {
                         </DialogHeader>
                       </DialogContent>
                     </Dialog>
+                  </motion.div>
+
+                  {/* language switcher */}
+                  <motion.div variants={itemVariants} className='content-center w-full rounded-md'>
+                    <div className='
+                      flex flex-row w-11/12
+                      justify-between items-center
+                      py-1 border-2 
+                      border-white 
+                      hover:border-2 hover:border-orange-600 
+                      rounded-md' 
+                      onClick={toggleDropdown}>
+                      <span className='text-white font-silkscreen px-2'>
+                        {i18n.language === 'nb' ? 'Norsk 🇳🇴' : 'English 🇬🇧'}
+                      </span>
+                      <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="24" height="24" 
+                        viewBox="0 0 24 24" fill="none" 
+                        stroke="currentColor" strokeWidth="2" 
+                        strokeLinecap="round" strokeLinejoin="round" 
+                        className="my-auto mr-2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </div>
+                    {dropdownOpen && (
+                      <div className='mt-2 w-4/5 rounded-md border-2 absolute bg-black z-50 border-red-500'>
+                        <button onClick={() => switchLanguage('nb')} className='text-left w-full py-2 px-2 flex justify-between items-center hover:bg-orange-600 hover:text-white'>
+                          Norsk 🇳🇴
+                          {i18n.language === 'nb'}
+                        </button>
+                        <button onClick={() => switchLanguage('en')} className='text-left w-full py-2 px-2 flex justify-between items-center hover:bg-orange-600 hover:text-white'>
+                          English 🇬🇧
+                          {i18n.language === 'en'}
+                        </button>
+                      </div>
+                    )}
                   </motion.div>
                 </section>
               </motion.section>
@@ -166,6 +213,35 @@ export default function Navbar() {
               </DialogHeader>
             </DialogContent>
           </Dialog>
+        </motion.li>
+        <motion.li>
+          {/* language switcher desktop */}
+          <motion.div variants={itemVariants}>
+            <div className='py-0.5 px-2 border-2 border-white hover:text-orange-600 hover:border-orange-600 rounded-md' onClick={toggleDropdown}>
+              <svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24"
+                viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                className=''>
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                <path d="M2 12h20" />
+              </svg>
+            </div>
+            {dropdownOpen && (
+              <div className='mt-2 w-32 rounded-md border-2 absolute right-16 z-50 bg-white text-orange-600'>
+                <button onClick={() => switchLanguage('nb')} className='text-left w-full py-2 px-2 rounded-md flex justify-between items-center hover:bg-orange-600 hover:text-white'>
+                  Norsk 🇳🇴
+                  {i18n.language === 'nb'}
+                </button>
+                <button onClick={() => switchLanguage('en')} className='text-left w-full py-2 px-2 rounded-md flex justify-between items-center hover:bg-orange-600 hover:text-white'>
+                  English 🇬🇧
+                  {i18n.language === 'en'}
+                </button>
+              </div>
+            )}
+          </motion.div>
         </motion.li>
       </ul>
     </motion.nav>

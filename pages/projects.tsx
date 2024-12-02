@@ -109,8 +109,8 @@ export default function Projects() {
                                 gap-1 
                                 flex 
                                 h-80 
-                                bg-orange-600 hover:bg-white
-                                text-white hover:text-orange-600
+                                bg-white hover:bg-orange-600
+                                text-orange-600 hover:text-white
                                 pb-10 z-50
                                 w-full 
                                 mx-auto 
@@ -118,8 +118,7 @@ export default function Projects() {
                                 md:w-full
                                 rounded-lg 
                                 overflow-hidden 
-                                border
-                                border-white
+                                border-orange-600
                                 max-w-md 
                                 '>
                             <div className='w-full h-3/4 relative overflow-clip'>

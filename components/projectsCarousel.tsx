@@ -5,6 +5,7 @@ import { Card } from "./ui/card";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
+import { useTranslation } from 'next-i18next';
 
 const arrowMotion = {
   rest: {
@@ -41,7 +42,7 @@ const textMotion = {
 
 export default function ProjectsCarousel() {
   const ref = useRef(null);
-
+  const { t } = useTranslation();
   const projects = [
     { url: "/projects/applitrack", src: "/projects/applitrack.webp", alt: "Applitrack", title: "O1", description: "Applitrack" },
     { url: "/projects/partnersos", src: "/projects/psos.webp", alt: "Partner SOS", title: "O2", description: "Partner-SOS" },
@@ -56,7 +57,7 @@ export default function ProjectsCarousel() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         className="mx-2 my-10 md:mx-0 font-silkscreen relative">
-        <h1 className="text-3xl mb-2 lg:mx-20">Projects</h1>
+        <h1 className="text-3xl mb-2 lg:mx-20">{t('projects.title')}</h1>
         <motion.p animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: 10, duration: 2 }} className="block lg:hidden absolute right-2 top-2">swipe ➡️</motion.p>
         {/* carousel */}
         <Carousel className="w-full pl-2 lg:pl-20">
@@ -74,7 +75,7 @@ export default function ProjectsCarousel() {
                     <h2 className="text-2xl">{project.title}</h2>
                     <p className="text-2xl">{project.description}</p>
                   </div>
-                  <motion.div className="py-2 pl-4 relative left-0 bottom-0.5 rounded-xl hover:underline decoration-2">View project</motion.div>
+                  <motion.div className="py-2 pl-4 relative left-0 bottom-0.5 rounded-xl hover:underline decoration-2">{t("projects.viewProject")}</motion.div>
                 </Link>
               </CarouselItem>
             ))}
@@ -87,7 +88,7 @@ export default function ProjectsCarousel() {
                 className="w-full bg-white  rounded-lg h-full">
                 <Card className=" w-full h-full text-orange-600 hover:text-white transition duration-1000 hover:duration-500 ease-in-out hover:bg-orange-600">
                   <Link href="/projects" className="flex justify-center h-full items-center group">
-                    <motion.h1 variants={textMotion} className="text-2xl group-hover:underline decoration-2">View all</motion.h1>
+                    <motion.h1 variants={textMotion} className="text-2xl group-hover:underline decoration-2">{t("projects.seeAll")}</motion.h1>
                     <motion.span variants={arrowMotion} className="focus:outline-none z-50">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" className="text-orange group-hover:white w-10 h-10">
                         <path d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />

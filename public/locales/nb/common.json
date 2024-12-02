@@ -3,7 +3,8 @@
 		"projects": "Prosjekter",
 		"contact": "Kontakt meg",
 		"resume": "CV",
-		"language": "Språk"
+		"language": "Språk",
+		"platforms": "Kontakt meg her"
 	},
 	"landing": {
 		"greeting": "Hei",
@@ -17,6 +18,10 @@
 		"title": "Prosjekter",
 		"viewProject": "Se mer",
 		"seeAll": "Se alle"
+	},
+	"toolbox":{
+		"title":"Teknologier jeg er kjent med",
+		"db": "Databaser"
 	},
 	"footer": {
 		"aboutUs": "Om meg",
@@ -113,20 +118,15 @@
 		"date": "18 august 2024",
 		"intro": "Applitrack er en webapp jeg laget for å spore jobbsøknadene jeg har sendt.",
 		"story": "Jeg laget dette verktøyet fordi jeg pleide å ha et regneark i Google Sheets og Microsoft Excel. Jeg byttet stadig mellom dem og glemte ofte hvilken som var den nyeste. Så jeg laget Applitrack for å se alle søknadene jeg hadde sendt, statusen på dem. Jeg ønsket også å kunne se statistikk over hvor mange søknader jeg hadde sendt, hvor mange jeg hadde fått svar fra og hvor mange jeg hadde fått et intervju fra.",
-		"techStack": {
-			"nextjs": "som JS-rammeverk",
-			"tailwind": "for styling",
-			"supabase": "for autentisering og database",
-			"vercel": "for hosting"
-		},
 		"nextJsExperience": "Å utvikle med Next.js var hyggelig, takket være innebygde verktøy som bildeoptimalisering og ruting. Hosting på Vercel, som er skreddersydd for Next.js, var sømløst. Tailwind CSS muliggjorde rask UI-utvikling, noe som gjorde det enkelt å lage responsive komponenter.",
-		"supabase": "Implementering av supabase i et nextjs-prosjekt var veldig rett frem og deres dokumentasjon er veldig bra."
+		"pocketbase": "Implementering av PocketBase var veldig lett takket være PocketHost og PocketBase SDK. Jeg kunne enkelt koble til databasen og hente data."
 	},
 	"greentalk": {
-		"description": "Om du elsker planeten, vil du elske GreenTalk",
+		"description": "For miljøvernere",
 		"date": "18 Mars, 2021",
 		"intro": "I vårt andre år på universitetet fikk vi i oppgave å lage en CRUD-applikasjon for semesteroppgaven vår. Etter en stund med diskusjon om hva slags nettsted og hva det skulle handle om, landet vi på et forum for miljøvernere. Siden global oppvarming, klimaendringer og forurensning blir større problemer, ønsket vi å lage et sted hvor likesinnede kunne kommunisere og starte arrangementer for å møtes.",
-  		"group": "Gruppen min besto av: "
+		"group": "Gruppen min besto av: ",
+		"me": "Meg"
 	},
 	"sanplan": {
 		"description": "Enkel todo-app laget med Expo Go",
@@ -136,6 +136,8 @@
 		"github": "Om du er interessert i koden så kan du finne den på "
 	},
 		"sara": {
+		"cardTitle":"Frilans arbeid",
+		"card": "Sarazamecznik.com",
 		"description": "Porteføljeside for kunstneren Sara Zamecznik",
 		"date": "27 Februar, 2024",
 		"intro": "Dette var et spennende prosjekt å gjøre.",
@@ -144,7 +146,7 @@
 		"intro4": "Jeg tok kontakt med Sara og presenterte et tilbud hun ikke kunne avslå. Jeg hadde friheten til å bruke hvilken som helst teknologi jeg foretrakk, med hennes eneste krav om et design som er minimalistisk, mobilvennlig og kostnadseffektivt å hoste.",
 		"criteria": "Med disse kriteriene i tankene, satte jeg i gang med å finne en passende teknologistabel. Jeg tenkte umiddelbart på å bruke et CMS som WordPress eller Squarespace for deres brukervennlighet og enkle vedlikehold. Selv om CMS-plattformer som WordPress eller Squarespace er populære for sin brukervennlighet, kommer de med en bokstavelig kostnad. Heldigvis finnes det mer kostnadseffektive alternativer. Gitt nettstedets natur, kunne alt innholdet være statisk og bare trenge oppdatering når hun lager et nytt innlegg. Her kommer statiske nettstedsgeneratorer (SSG) og headless-CMS-systemer inn. Ved å bruke SSG-er, som Next.js, til å hente innhold fra headless CMS, i dette tilfellet Contentful, kunne jeg generere en statisk nettside. Denne tilnærmingen er ideell for å oppnå et tilpasset UI-design og muliggjør enkel hosting på Vercel, gratis. Det gjør det også mulig for ikke-kodere å lage innhold gjennom et brukervennlig CMS-grensesnitt, som utløser automatisk gjenoppbygging av nettsiden via webhooks.",
 		"choice": "Dette valget kommer med en ulempe—å endre UI i fremtiden vil enten kreve kodekunnskap eller å ansette mine tjenester igjen. Etter å ha diskutert fordeler og ulemper, ble Sara og jeg enige om headless CMS-tilnærmingen.",
-		"research": "Etter å ha gjort litt research endte teknologistabelen opp med å være:",
+		"research": "Etter å ha gjort litt research endte tech stacken opp med å være:",
 		"techStack": {
 			"nextjs": "som JS-rammeverk",
 			"tailwind": "for styling",

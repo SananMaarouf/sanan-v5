@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
+import { useTranslation } from 'next-i18next';
+
 
 export default function Toolbox() {
+  const { t } = useTranslation();
   // Arrays containing the technologies for backend, frontend, and databases
   const backend = [
     { src: "/technologies/rails.webp", alt: "Ruby on Rails", title: "Ruby on Rails" },
@@ -50,7 +53,7 @@ export default function Toolbox() {
         className="w-full"
       >
         {/* Section title */}
-        <h2 className="text-3xl mb-2 md:text-4xl">Technologies I Know and Love</h2>
+        <h2 className="text-3xl mb-2 md:text-4xl">{t("toolbox.title")}</h2>
 
         {/* Container for the technology categories */}
         <div className="text-xl md:text-2xl flex flex-col gap-4">
@@ -123,7 +126,7 @@ export default function Toolbox() {
 
           {/* Databases section */}
           <div>
-            <h3 className="underline decoration-2 mb-2">Databases:</h3>
+            <h3 className="underline decoration-2 mb-2">{t("toolbox.db")}</h3>
             <div className="
               p-2  
               flex flex-wrap  

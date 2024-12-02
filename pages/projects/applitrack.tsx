@@ -1,9 +1,21 @@
 import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  }
+}
 
 
 export default function Applitrack() {
+    const { t } = useTranslation();
     return (
         <section className="px-5 md:px-0">
             {/* heading and image gallery */}
@@ -28,10 +40,10 @@ export default function Applitrack() {
                         Applitrack.no
                     </h1>
                     <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl">
-                        Job application tracker                    
+                        {t("applitrack.description")}
                     </p>
                     <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl">
-                        August 18th, 2024
+                    {t("applitrack.date")}
                     </p>
                 </div>
 
@@ -52,11 +64,7 @@ export default function Applitrack() {
             >
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                    I created this tool because i used to have a spreadsheet in Google Sheets and 
-                    Microsoft Excel. I kept switching between them and often forgot which one was the most recent. 
-                    So i created Applitrack to see all the applications i had sent, the status of them. 
-                    I also wanted to be able to see statistics on how many applications i had sent, 
-                    how many i had gotten a response from and how many i had gotten an interview from.
+                        {t("applitrack.story")}
                     </p>
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
@@ -70,14 +78,12 @@ export default function Applitrack() {
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                    Developing with Next.js was very enjoyable. 
-                    Thanks to its built-in tools like image optimization, routing and easy hosting on Vercel, 
-                    Tailwind CSS facilitated rapid UI development, making responsive components easy to create.
+                        {t("applitrack.nextJsExperience")}
                     </p>
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                    I used PocketBase to store the data. It was easy to set up and use. 
+                        {t("applitrack.pocketbase")}
                     </p>
                 </section>
             </motion.div>

@@ -9,6 +9,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { useTranslation } from 'next-i18next';
+
 
 const menuVariants = {
   hidden: { opacity: 0, x: 100 },
@@ -29,6 +31,7 @@ const itemVariants = {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -70,7 +73,7 @@ export default function Navbar() {
                 <section className='flex flex-col space-y-10 p-10 mt-10 text-3xl font-silkscreen'>
                   <motion.div variants={itemVariants}>
                     <a download={"/files/cv_en.pdf"} onClick={toggleMenu} href="" className='hover:underline underline-offset-2 flex items-center space-x-2 hover:text-orange-600'>
-                      <span>Resume</span>
+                      <span>{t("nav.resume")}</span>
                       {/* download svg icon */}
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download">
@@ -82,7 +85,7 @@ export default function Navbar() {
                   </motion.div>
                   <motion.div variants={itemVariants}>
                     <Link onClick={toggleMenu} href="/projects" className='hover:underline underline-offset-2 hover:text-orange-600'>
-                      Projects
+                      {t("nav.projects")}
                     </Link>
                   </motion.div>
                   <motion.div variants={itemVariants}>
@@ -90,10 +93,10 @@ export default function Navbar() {
                       Contact
                     </Link> */}
                     <Dialog>
-                      <DialogTrigger className='font-silkscreen hover:text-orange-600'>Contact</DialogTrigger>
+                      <DialogTrigger className='font-silkscreen hover:text-orange-600'>{t("nav.contact")}</DialogTrigger>
                       <DialogContent className='font-silkscreen'>
                         <DialogHeader>
-                          <DialogTitle>Find me on these platforms</DialogTitle>
+                          <DialogTitle>{t("nav.platforms")} </DialogTitle>
                           <DialogDescription className='flex gap-4'>
                             <Link
                               href="https://www.linkedin.com/in/sanan-maarouf/"
@@ -125,7 +128,7 @@ export default function Navbar() {
       <ul className="hidden justify-end w-full md:flex font-silkscreen">
         <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline underline-offset-4">
           <a download href="/files/cv_en.pdf" className=' flex items-center space-x-2 hover:text-orange-400 '>
-            <span>Resume</span>
+            <span>{t("nav.resume")}</span>
             {/* download svg icon */}
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download">
@@ -136,14 +139,14 @@ export default function Navbar() {
           </a>
         </motion.li>
         <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline hover:text-orange-400 underline-offset-4">
-          <Link href="/projects">Projects</Link>
+          <Link href="/projects">{t("nav.projects")}</Link>
         </motion.li>
         <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline underline-offset-4">
           <Dialog>
-            <DialogTrigger className='hover:text-orange-500'>Contact</DialogTrigger>
+            <DialogTrigger className='hover:text-orange-500'>{t("nav.contact")}</DialogTrigger>
             <DialogContent className='font-silkscreen'>
               <DialogHeader>
-                <DialogTitle className=''>Find me on these platforms</DialogTitle>
+                <DialogTitle className=''>{t("nav.platforms")}</DialogTitle>
                 <DialogDescription className='flex flex-col md:flex-row gap-4'>
                   <Link
                     href="https://www.linkedin.com/in/sanan-maarouf/"

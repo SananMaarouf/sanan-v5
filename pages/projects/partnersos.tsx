@@ -8,6 +8,17 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from "@/components/ui/carousel"
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  }
+}
 
 
 const images = [
@@ -38,6 +49,7 @@ const images = [
 ];
 
 export default function PartnerSOS() {
+	const { t } = useTranslation();
 	return (
 		<section className="px-5 md:px-0">
 			{/* heading and image gallery */}
@@ -69,10 +81,10 @@ export default function PartnerSOS() {
                         PartnerSOS
                     </h1>
                     <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl">
-										Violence alarm / location sharing app
+										{t("partnersos.description")}
                     </p>
                     <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl">
-										July 8th, 2024
+										{t("partnersos.date")}
                     </p>
 					</div>
 					<div className="">
@@ -89,15 +101,7 @@ export default function PartnerSOS() {
 			>
 				<section className="mx-auto my-5 md:my-10 ">
 					<p className="">
-					PartnerSOS empowers users to share their location with their partners instantly
-					when they feel unsafe. Unlike apps like Messenger or Snapchat, 
-					PartnerSOS requires only a single tap, ensuring a quick and efficient
-					notification process. Upon activation, the partner receives an SMS containing a link
-					to view the partners location via a web app. 
-					The location updates in real-time and can be accessed directly 
-					in Google Maps for precise navigation. 
-					This streamlined approach ensures that users can seek assistance quickly and 
-					effortlessly, especially in stressful situations
+						{t("partnersos.intro")}
 					</p>
 				</section>
 				<section className="mx-auto md:my-10 w-4/5 rounded-lg bg-gray-600 ">
@@ -119,13 +123,13 @@ export default function PartnerSOS() {
 						<li>
 							Expo Go:
 							<p>
-							A React Native framework that accelerates app development by providing robust developer tools
+								{t("partnersos.expoGoDetails")}
 							</p>
 						</li>
 						<li>
 							Firebase:
 							<p>
-							A suite of cloud-based development tools that aid in building, deploying, and scaling mobile apps. I utilized Firebase Authentication, Firestore DB, and Cloud Functions
+								{t("partnersos.firebaseDetails")}
 							</p>
 						</li>
 					</ul>

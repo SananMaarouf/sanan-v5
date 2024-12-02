@@ -1,9 +1,22 @@
 import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  }
+}
+
 
 
 export default function Insultifier() {
+    const {t} = useTranslation();
     return (
         <section className="px-5 md:px-0">
             {/* heading and image gallery */}
@@ -34,10 +47,10 @@ export default function Insultifier() {
                         Insultifier
                     </h1>
                     <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl">
-                    Clap back quicly
+                        {t("insultifier.description")}
                     </p>
                     <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl">
-                    May 6th, 2024
+                        {t("insultifier.date")}
                     </p>
                 </div>
 
@@ -59,12 +72,12 @@ export default function Insultifier() {
             >
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                    Are you immature? or very sarcastic? Then insult.sanan.no is the perfect tool for you!
+                        {t("insultifier.intro")}
                     </p>
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                    The insultifier is a tool i made to quickly clap back at my friends when they say something stupid in the group chat, but it works great in a corporate environment....i think.
+                    {t("insultifier.intro2")}
                     </p>
                 </section>
             </motion.div>

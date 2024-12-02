@@ -2,7 +2,17 @@ import React from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  }
+}
 const containerVariants = {
     hidden: { opacity: 1 },
     visible: {
@@ -20,41 +30,43 @@ const itemVariants = {
 };
 
 export default function Projects() {
+    const { t } = useTranslation();
+
 
     const projects = [
         {
             title: 'Applitrack',
-            description: "Job application tracker",
+            description: t("applitrack.description"),
             image: '/projects/applitrack.webp',
             url: '/projects/applitrack'
         },
         {
             title: 'PartnerSOS',
-            description: "Violence alarm via SMS",
+            description: t("partnersos.description"),
             image: '/projects/psos.webp',
             url: '/projects/partnersos'
         },
         {
             title: 'SanPlan',
-            description: "Todo list app",
+            description: t("sanplan.description"),
             image: '/projects/sanplan.webp',
             url: '/projects/sanplan'
         },
         {
-            title: 'Sarazamecznik.com',
-            description: "Client portfolio page",
+            title: t("sara.cardTitle"),
+            description: t("sara.card"),
             image: '/projects/zamec.webp',
             url: '/projects/sara'
         },
         {
             title: 'Insultifier',
-            description: "Insultifies text",
+            description: t("insultifier.description"),
             image: '/projects/insultifier.webp',
             url: '/projects/insultifier'
         },
         {
             title: 'Greentalk',
-            description: "Forum for environmentalists",
+            description: t("greentalk.description"),
             image: '/projects/greentalk.webp',
             url: '/projects/greentalk'
         },
@@ -69,7 +81,7 @@ export default function Projects() {
                 animate="visible"
                 
                 className="
-                    w-4/5
+                    w-11/12
                     lg:w-3/4 
                     py-6 
                     mx-auto 
@@ -96,10 +108,10 @@ export default function Projects() {
                             className='
                                 gap-1 
                                 flex 
-                                h-72 
+                                h-80 
                                 bg-orange-600 hover:bg-white
                                 text-white hover:text-orange-600
-                                pb-3 z-50
+                                pb-10 z-50
                                 w-full 
                                 mx-auto 
                                 flex-col 
@@ -107,7 +119,8 @@ export default function Projects() {
                                 rounded-lg 
                                 overflow-hidden 
                                 border
-                                border-white 
+                                border-white
+                                max-w-md 
                                 '>
                             <div className='w-full h-3/4 relative overflow-clip'>
                                 <Image
@@ -118,7 +131,7 @@ export default function Projects() {
                                     className="rounded-t-lg object-fill"
                                 />
                             </div>
-                            <div className='h-1/4 px-4 z-50'>
+                            <div className='h-1/3 px-4 z-50'>
                                 <h2 className='text-xl font-semibold'>{project.title}</h2>
                                 <p className='text-md'>{project.description}</p>
                             </div>

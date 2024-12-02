@@ -41,7 +41,7 @@ export default function Greentalk() {
                 lg:w-1/2
                 "
             >
-                <div className="w-full justify-center flex flex-col px-4 pb-2">
+                <div className="w-full justify-center bg-white text-orange-600 py-2 flex flex-col px-4 pb-2">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl">
                         Greentalk
                     </h1>

@@ -47,7 +47,7 @@ export default function Sara() {
                 lg:w-1/2
                 "
             >
-                <div className="w-full flex flex-col px-4 pb-2">
+                <div className="w-full flex bg-white text-orange-600 flex-col px-4 pb-2">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl">
                         Sarazamecznik.com
                     </h1>

@@ -48,14 +48,15 @@ export default function Sanplan() {
                 relative
                 "
             >
-                <div className="absolute md:relative bg-orange-600 md:bg-transparent md:my-auto justify-end h-2/6 w-full flex flex-col px-4 py-6 z-10 bg-background ">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl text-white">
+                <div className="
+                    absolute md:relative bg-white text-orange-600 md:bg-transparent md:my-auto justify-end h-2/6 w-full flex flex-col px-4 py-6 z-10 ">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl">
                         SanPlan
                     </h1>
-                    <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl text-white">
+                    <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl ">
                         {t("sanplan.description")}
                     </p>
-                    <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl text-white">
+                    <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl ">
                         {t("sanplan.date")}
                     </p>
                 </div>

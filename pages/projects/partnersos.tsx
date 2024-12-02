@@ -75,7 +75,7 @@ export default function PartnerSOS() {
                 "
 			>
 				{/* heading and image */}
-				<div className="flex flex-row justify-evenly py-16 text-white w-full">
+				<div className="flex flex-row justify-evenly py-16 bg-white text-orange-600 w-full">
 					<div className=' content-center pl-3 mb:pl-0'>
 					<h1 className="text-3xl md:text-4xl lg:text-5xl">
                         PartnerSOS

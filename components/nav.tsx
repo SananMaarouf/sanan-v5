@@ -10,7 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { useTranslation, i18n } from 'next-i18next';
+import { useTranslation } from 'next-i18next';
 
 
 const menuVariants = {
@@ -35,6 +35,9 @@ export default function Navbar() {
   const { t, i18n } = useTranslation();
   const router = useRouter();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const locale = i18n.language;
+  const cvUrl = locale === 'nb' ? '/files/cv_nb.pdf' : '/files/cv_en.pdf';
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -84,7 +87,7 @@ export default function Navbar() {
               >
                 <section className='flex flex-col space-y-10 p-10 mt-10 text-3xl font-silkscreen'>
                   <motion.div variants={itemVariants}>
-                    <a download={"/files/cv_en.pdf"} onClick={toggleMenu} href="" className='hover:underline underline-offset-2 flex items-center space-x-2 hover:text-orange-600'>
+                    <a download onClick={toggleMenu} href={cvUrl} className='hover:underline underline-offset-2 flex items-center space-x-2 hover:text-orange-600'>
                       <span>{t("nav.resume")}</span>
                       {/* download svg icon */}
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -132,7 +135,7 @@ export default function Navbar() {
                   {/* language switcher */}
                   <motion.div variants={itemVariants} className='content-center w-full rounded-md'>
                     <div className='
-                      flex flex-row w-11/12
+                      flex flex-row
                       justify-between items-center
                       py-1 border-2 
                       border-white 
@@ -174,7 +177,7 @@ export default function Navbar() {
       {/* desktop navbar */}
       <ul className="hidden justify-end w-full md:flex font-silkscreen">
         <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline underline-offset-4">
-          <a download href="/files/cv_en.pdf" className=' flex items-center space-x-2 hover:text-orange-400 '>
+          <a download href={cvUrl} className=' flex items-center space-x-2 hover:text-orange-400 '>
             <span>{t("nav.resume")}</span>
             {/* download svg icon */}
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -221,8 +224,8 @@ export default function Navbar() {
               <svg xmlns="http://www.w3.org/2000/svg"
                 width="24" height="24"
                 viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round"
+                stroke="currentColor" strokeWidth="2"
+                strokeLinecap="round" strokeLinejoin="round"
                 className=''>
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />

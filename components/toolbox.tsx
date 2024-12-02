@@ -11,7 +11,7 @@ export default function Toolbox() {
     { src: "/technologies/node.webp", alt: "Nodejs", title: "Nodejs" },
     { src: "/technologies/python.webp", alt: "Python", title: "Python" },
     { src: "/technologies/dart.webp", alt: "Dart", title: "Dart" },
-    { src: "/technologies/kotlin.webp", alt: "Kotlin", title: "Kotlin" },
+    { src: "/technologies/Kotlin.webp", alt: "Kotlin", title: "Kotlin" },
     { src: "/technologies/firebase.webp", alt: "Firebase", title: "Firebase" },
     { src: "/technologies/supabase.webp", alt: "Supabase", title: "Supabase" },
     { src: "/technologies/pocketbase.webp", alt: "Pocketbase", title: "Pocketbase" },

@@ -2,6 +2,17 @@ import Landing from "../components/landing";
 import ProjectsCarousel from "../components/projectsCarousel";
 import Toolbox from "@/components/toolbox";
 import { motion } from "motion/react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  }
+}
+
 export default function Home() {
   return (
     <motion.main

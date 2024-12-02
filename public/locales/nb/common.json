@@ -15,6 +15,7 @@
 	},
 	"projects": {
 		"title": "Prosjekter",
+		"viewProject": "Se mer",
 		"seeAll": "Se alle"
 	},
 	"footer": {

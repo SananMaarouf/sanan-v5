@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { Oi, Modak, Climate_Crisis, Silkscreen, Roboto, Andada_Pro } from "next/font/google";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
+import { appWithTranslation } from "next-i18next";
 
 const oi = Oi({ subsets: ["latin"], weight: "400" });
 const modak = Modak({ subsets: ["latin"], weight: "400" });
@@ -11,7 +12,7 @@ const silkscreen = Silkscreen({ subsets: ["latin"], weight: "400" });
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 const andadaPro = Andada_Pro({ subsets: ["latin"], weight: "600" });
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <style jsx global>{`
@@ -32,3 +33,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+export default appWithTranslation(App);

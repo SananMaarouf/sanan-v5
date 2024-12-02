@@ -1,8 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'motion/react';
+import { useTranslation } from 'next-i18next';
 
 export default function Landing() {
+const { t } = useTranslation();
   return (
     <motion.section
       initial={{ opacity: 0, y: 100 }}
@@ -23,7 +25,7 @@ export default function Landing() {
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         <h1 className="text-4xl md:text-5xl text-white">
-          Hi
+          {t('landing.greeting')}
           <motion.div
             className="w-fit inline-block"
             animate={{ rotate: [0, 20, -20, 0] }}
@@ -34,10 +36,10 @@ export default function Landing() {
         </h1>
         <Image src={"/sanan1.webp"} className='mx-auto rounded-full mt-4 md:hidden' alt="Portrait" width={200} height={200} />
         <h2 className="text-4xl md:text-5xl text-white mt-4">
-          I&apos;m <span className='underline text-orange-600'>Sanan Maarouf</span>
+          {t("landing.im")} <span className='underline text-orange-600'>Sanan Maarouf</span>
         </h2>
         <h3 className="text-2xl md:text-3xl text-gray-300 mt-2">
-          Developer based in <br/> Oslo, Norway
+          {t("landing.jobtitle")} <br/> {t("landing.location")}
         </h3>
       </motion.div>
       <motion.div

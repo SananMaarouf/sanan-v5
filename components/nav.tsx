@@ -85,7 +85,7 @@ export default function Navbar() {
                 transition={{ type: 'tween', duration: 0.3 }}
                 className='rounded-l-3xl fixed z-40 top-0 right-0 w-3/4 h-full bg-black border text-white'
               >
-                <section className='flex flex-col space-y-10 py-10 px-4 mt-10 text-3xl font-silkscreen'>
+                <section className='flex flex-col space-y-10 py-10 px-4 mt-10 text-2xl font-silkscreen'>
                   <motion.div variants={itemVariants}>
                     <a download onClick={toggleMenu} href={cvUrl} className='hover:underline underline-offset-2 flex items-center space-x-2 hover:text-orange-600'>
                       <span>{t("nav.resume")}</span>

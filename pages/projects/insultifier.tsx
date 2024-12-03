@@ -68,7 +68,7 @@ export default function Insultifier() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="h-full"
+                className="h-full font-chakra font-bold"
             >
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>

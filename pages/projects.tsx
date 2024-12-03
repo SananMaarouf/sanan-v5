@@ -109,16 +109,16 @@ export default function Projects() {
                                 gap-1 
                                 flex 
                                 h-80 
-                                bg-white hover:bg-orange-600
-                                text-orange-600 hover:text-white
-                                pb-10 z-50
+                                bg-white hover:bg-deco
+                                text-deco hover:text-foreground
+                                pb-10
                                 w-full 
                                 mx-auto 
                                 flex-col 
                                 md:w-full
                                 rounded-lg 
                                 overflow-hidden 
-                                border-orange-600
+                                border-deco
                                 max-w-md 
                                 '>
                             <div className='w-full h-3/4 relative overflow-clip'>
@@ -130,7 +130,7 @@ export default function Projects() {
                                     className="rounded-t-lg object-fill"
                                 />
                             </div>
-                            <div className='h-1/3 px-4 z-50'>
+                            <div className='h-1/3 px-4 '>
                                 <h2 className='text-xl font-semibold'>{project.title}</h2>
                                 <p className='text-md'>{project.description}</p>
                             </div>

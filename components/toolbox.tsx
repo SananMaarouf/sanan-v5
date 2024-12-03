@@ -39,7 +39,7 @@ export default function Toolbox() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
       className="
-        rounded-xl mx-auto md:mx-20  
+        rounded-xl mx-auto md:mx-auto  
         flex flex-col items-center 
         font-silkscreen flex-wrap 
         my-10 md:items-start ml-2
@@ -78,8 +78,8 @@ export default function Toolbox() {
                     rounded-2xl p-2 font-semibold text-center
                     items-center justify-center 
                     border-2 border-white  
-                    bg-neutral-100 hover:bg-orange-600  
-                    text-orange-600 hover:text-white 
+                    bg-neutral-100 hover:bg-deco  
+                    text-deco hover:text-white 
                     transition duration-75 hover:duration-150 ease-linear
                     w-24 h-24
                     md:w-28 md:h-28 
@@ -111,11 +111,11 @@ export default function Toolbox() {
                     rounded-2xl p-2 font-bold
                     items-center justify-center 
                     border-2 border-white  
-                    bg-white hover:bg-orange-600  
-                    text-orange-600 hover:text-white 
+                    bg-white hover:bg-deco  
+                    text-deco hover:text-white 
                     transition duration-75 hover:duration-150 ease-linear 
                     w-24 h-24
-                    md:w-28 md:h-24 
+                    md:w-28 md:h-28 
                   ">
                   <img src={tech.src} alt={tech.alt} className="w-12 h-12" />
                   <p>{tech.title}</p>
@@ -144,10 +144,10 @@ export default function Toolbox() {
                     rounded-2xl font-bold
                     items-center justify-center 
                     border-2 border-white  
-                    bg-white hover:bg-orange-600  
-                    text-orange-600 hover:text-white
+                    bg-white hover:bg-deco  
+                    text-deco hover:text-white
                     transition duration-75 hover:duration-150 ease-linear 
-                    w-28 h-28
+                    w-24 h-24
                     md:w-28 md:h-28 
                   ">
                   <img src={tech.src} alt={tech.alt} className="w-12 h-12" />

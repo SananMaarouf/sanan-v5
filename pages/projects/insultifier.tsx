@@ -42,7 +42,7 @@ export default function Insultifier() {
                 lg:w-1/2
                 "
             >
-                <div className="w-full justify-center bg-white py-2 text-orange-600 flex flex-col px-4 pb-2">
+                <div className="w-full font-bold  justify-center bg-white py-2 text-deco flex flex-col px-4 pb-2">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl">
                         Insultifier
                     </h1>

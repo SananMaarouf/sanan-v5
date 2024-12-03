@@ -49,7 +49,7 @@ export default function Sanplan() {
                 "
             >
                 <div className="
-                    absolute md:relative bg-white text-orange-600 md:bg-transparent md:my-auto justify-end h-2/6 w-full flex flex-col px-4 py-6 z-10 ">
+                    absolute md:relative bg-white text-deco md:bg-transparent font-bold md:my-auto justify-end h-2/6 w-full flex flex-col px-4 py-6 z-10 ">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl">
                         SanPlan
                     </h1>

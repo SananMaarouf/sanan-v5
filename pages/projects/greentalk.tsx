@@ -41,7 +41,7 @@ export default function Greentalk() {
                 lg:w-1/2
                 "
             >
-                <div className="w-full justify-center bg-white text-orange-600 py-2 flex flex-col px-4 pb-2">
+                <div className="w-full justify-center font-bold bg-white text-deco py-2 flex flex-col px-4 pb-2">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl">
                         Greentalk
                     </h1>
@@ -67,7 +67,7 @@ export default function Greentalk() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
             >
-                <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
+                <section className="mx-auto text-lg my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
                         {t("greentalk.intro")}
                     </p>

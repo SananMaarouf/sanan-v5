@@ -35,7 +35,7 @@ export default function Applitrack() {
                 md:w-3/5 lg:w-1/2
                 "
             >
-                <div className="w-full justify-center bg-white text-orange-600 py-2 flex flex-col px-4 pb-2">
+                <div className="w-full font-bold justify-center bg-white text-deco py-2 flex flex-col px-4 pb-2">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl">
                         Applitrack.no
                     </h1>
@@ -61,6 +61,7 @@ export default function Applitrack() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
+                className="text-xl"
             >
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
@@ -68,7 +69,7 @@ export default function Applitrack() {
                     </p>
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
-                    <h2 className="text-xl ">Tech stack:</h2>
+                    <h2 className="">Tech stack:</h2>
                     <ul className="">
                         <li>NextJS </li>
                         <li>TailwindCSS</li>

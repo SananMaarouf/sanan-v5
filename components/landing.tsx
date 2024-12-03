@@ -14,17 +14,19 @@ const { t } = useTranslation();
         mt-10 mb-28
         h-96 py-24 
         w-11/12 mx-auto 
+        bg-transparent
         flex flex-col md:flex-row 
         items-center justify-center 
         font-silkscreen text-center 
-        md:mt-10 md:items-center md:text-left"
+        md:mt-10 md:items-center md:text-left
+        "
     >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
       >
-        <h1 className="text-4xl md:text-5xl text-white">
+        <h1 className="text-4xl md:text-5xl ">
           {t('landing.greeting')}
           <motion.div
             className="w-fit inline-block"
@@ -35,10 +37,10 @@ const { t } = useTranslation();
           </motion.div>
         </h1>
         <Image src={"/sanan1.webp"} className='mx-auto rounded-full mt-4 md:hidden' alt="Portrait" width={200} height={200} />
-        <h2 className="text-4xl md:text-5xl text-white mt-4">
-          {t("landing.im")} <span className='underline text-orange-600'>Sanan Maarouf</span>
+        <h2 className="text-4xl md:text-5xl mt-4">
+          {t("landing.im")} <span className='underline text-deco'>Sanan Maarouf</span>
         </h2>
-        <h3 className="text-2xl md:text-3xl text-gray-300 mt-2">
+        <h3 className="text-2xl md:text-3xl mt-2">
           {t("landing.jobtitle")} <br/> {t("landing.location")}
         </h3>
       </motion.div>

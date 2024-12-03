@@ -56,14 +56,14 @@ export default function ProjectsCarousel() {
         initial={{ opacity: 0, y: 200 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="mx-2 my-10 md:mx-0 font-silkscreen relative">
+        className="mx-2 my-10 md:mx-auto font-silkscreen relative">
         <h1 className="text-3xl mb-2 lg:mx-20">{t('projects.title')}</h1>
         <motion.p animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: 10, duration: 2 }} className="block lg:hidden absolute right-2 top-2">swipe ➡️</motion.p>
         {/* carousel */}
         <Carousel className="w-full pl-2 lg:pl-20">
           <CarouselContent className="pl-4 md:p-4 gap-6 md:gap-5 lg:w-full">
             {projects.map((project, index) => (
-              <CarouselItem key={index} className="text-orange-600 w-full transition duration-300 hover:duration-300 ease-linear bg-white hover:bg-orange-600 h-96 md:basis-56 rounded-xl">
+              <CarouselItem key={index} className="text-deco w-full transition duration-300 hover:duration-300 ease-linear bg-white hover:bg-deco h-96 md:basis-56 rounded-xl">
                 <Link href={project.url} className="  hover:text-white w-full h-full cursor-grab active:cursor-grabbing flex flex-col">
                   <Image
                     src={project.src}
@@ -86,7 +86,7 @@ export default function ProjectsCarousel() {
                 whileTap="tap"
                 animate="rest"
                 className="w-full bg-white  rounded-lg h-full">
-                <Card className=" w-full h-full text-orange-600 hover:text-white transition duration-1000 hover:duration-500 ease-in-out hover:bg-orange-600">
+                <Card className=" w-full h-full text-deco hover:text-white transition duration-1000 hover:duration-500 ease-in-out hover:bg-deco">
                   <Link href="/projects" className="flex justify-center h-full items-center group">
                     <motion.h1 variants={textMotion} className="text-2xl group-hover:underline decoration-2">{t("projects.seeAll")}</motion.h1>
                     <motion.span variants={arrowMotion} className="focus:outline-none z-50">

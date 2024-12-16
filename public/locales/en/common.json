@@ -172,5 +172,13 @@
 		"date": "March 18th, 2021",
 		"story":"In our second year of university, we were tasked with creating a practical Android app for our semester assignment. My group spent some time talking about our trials and tribulations and how an app could solve them. Turns out that therapy is the solution to most of them, but what could be solved was the issue of finding a movie that everybody likes on movie nights and thus the idea was born.",
 		"group": "My group consisted of: "
+	},
+	"dubistro": {
+		"description": "Promotional page for local musical duo.",
+		"date": "December 10th, 2024",
+		"intro": "This was a project I did for a local musical duo who wanted a simple website to more easily receive bookings.",
+		"intro2": "I was approached by Maxim about creating a website for him and his partner and I was more than willing to help. I had the freedom to use whatever technology I preferred, with their only requirements being a design that is fast, mobile-friendly, and user-friendly.",
+		"criteria": "With these criteria in mind, I set about finding a suitable techstack. I immediately thought of using a CMS like Contentful for their ease of use and ease of maintenance. Given the nature of the site, all content could be static and only need updating when they make a change to the CMS system. This is where static site generators (SSG) and headless CMS systems come in. By using SSGs, such as Next.js, to pull content from a headless CMS, in this case Sanity CMS, I was able to generate a static website. This approach is ideal for achieving a custom UI design and enables easy hosting on Vercel, free of charge. It also enables non-coders to manage content through an easy-to-use CMS interface, which triggers automatic website rebuilds via webhooks."
+
 	}
 }

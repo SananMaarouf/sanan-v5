@@ -35,6 +35,12 @@ export default function Projects() {
 
     const projects = [
         {
+            title: "Dubistro",
+            description: t("dubistro.description"),
+            image: '/projects/dubistro.png',
+            url: '/projects/dubistro'
+        },
+        {
             title: 'Applitrack',
             description: t("applitrack.description"),
             image: '/projects/applitrack.webp',

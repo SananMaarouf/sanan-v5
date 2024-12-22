@@ -19,7 +19,7 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="flex flex-col ">
+      className="flex flex-col w-full md:w-10/12 mx-auto ">
       {/* Landing */}
       <Landing/>    
       {/* Projects */}  

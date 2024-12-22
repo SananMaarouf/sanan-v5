@@ -1,53 +1,39 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { Card } from "./ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import { useRef } from "react";
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "next-i18next";
 
 const arrowMotion = {
   rest: {
     x: 0,
-    transition: {
-      duration: 0.1,
-    }
+    transition: { duration: 0.1 },
   },
   hover: {
     x: 10,
-    transition: {
-      duration: 0.2,
-    },
-  }
+    transition: { duration: 0.2 },
+  },
 };
 
 const textMotion = {
   rest: {
     opacity: 1,
-    transition: {
-      duration: 0.1,
-    }
+    transition: { duration: 0.1 },
   },
   hover: {
     scale: 1.1,
-    transition: {
-      duration: 0.1,
-    },
-    tap: {
-      scale: 0.9
-    }
-  }
+    transition: { duration: 0.1 },
+    tap: { scale: 0.9 },
+  },
 };
 
 export default function ProjectsCarousel() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
   const projects = [
     { url: "/projects/dubistro", src: "/projects/dubistro.png", alt: "Dubistro", title: "O1", description: "Dubistro" },
     { url: "/projects/applitrack", src: "/projects/applitrack.webp", alt: "Applitrack", title: "O2", description: "Applitrack" },
     { url: "/projects/partnersos", src: "/projects/psos.webp", alt: "Partner SOS", title: "O3", description: "Partner-SOS" },
-    { url: "/projects/sara", src: "/projects/zamec.webp", alt: "Artist portfolio", title: "O4", description: "Artist portfolio" },
   ];
 
   return (
@@ -56,53 +42,76 @@ export default function ProjectsCarousel() {
         ref={ref}
         initial={{ opacity: 0, y: 200 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="mx-2 my-10 md:mx-auto font-silkscreen relative">
-        <h1 className="text-3xl mb-2 lg:mx-20">{t('projects.title')}</h1>
-        <motion.p animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: 10, duration: 2 }} className="block lg:hidden absolute right-2 top-2">swipe ➡️</motion.p>
-        {/* carousel */}
-        <Carousel className="w-full pl-2 lg:pl-20">
-          <CarouselContent className="pl-4 md:p-4 gap-6 md:gap-5 lg:w-full">
-            {projects.map((project, index) => (
-              <CarouselItem key={index} className="text-deco w-full transition duration-300 hover:duration-300 ease-linear bg-white hover:bg-deco h-96 md:basis-56 rounded-xl">
-                <Link href={project.url} className="  hover:text-white w-full h-full cursor-grab active:cursor-grabbing flex flex-col">
-                  <Image
-                    src={project.src}
-                    alt={project.alt}
-                    width={400}
-                    height={400}
-                    className="rounded-xl object-none md:object-cover h-60 md:h-52" />
-                  <div className="p-4 flex-grow">
-                    <h2 className="text-2xl">{project.title}</h2>
-                    <p className="text-2xl">{project.description}</p>
-                  </div>
-                  <motion.div className="py-2 pl-4 relative left-0 bottom-0.5 rounded-xl hover:underline decoration-2">{t("projects.viewProject")}</motion.div>
-                </Link>
-              </CarouselItem>
-            ))}
-            <CarouselItem className="w-full md:basis-56 rounded-xl">
-              <motion.div
-                initial="rest"
-                whileHover="hover"
-                whileTap="tap"
-                animate="rest"
-                className="w-full bg-white  rounded-lg h-full">
-                <Card className=" w-full h-full text-deco hover:text-white transition duration-1000 hover:duration-500 ease-in-out hover:bg-deco">
-                  <Link href="/projects" className="flex justify-center h-full items-center group">
-                    <motion.h1 variants={textMotion} className="text-2xl group-hover:underline decoration-2">{t("projects.seeAll")}</motion.h1>
-                    <motion.span variants={arrowMotion} className="focus:outline-none z-50">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" className="text-orange group-hover:white w-10 h-10">
-                        <path d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
-                      </svg>
-                    </motion.span>
-                  </Link>
-                </Card>
-              </motion.div>
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel>
+        transition={{delay:0.6, duration: 1 }}
+        className="
+        my-10 
+        md:mx-auto font-silkscreen 
+        relative w-full xl:w-10/12
+        "
+      >
+        <h1 className="text-3xl mb-2">{t("projects.title")}</h1>
+        <motion.p animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: 10, duration: 2 }} className="block xl:hidden absolute right-2 top-2">
+          swipe ➡️
+        </motion.p>
+        <motion.p animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: 10, duration: 2 }} className="hidden xl:block absolute right-2 top-2">
+          scroll ➡️
+        </motion.p>
+        {/* Simple horizontal slider */}
+        <div className="
+          overflow-x-scroll flex 
+          gap-6 py-4
+          ">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="shrink-0 w-72 h-80 bg-white rounded-xl transition duration-300 ease-linear hover:bg-deco text-deco"
+            >
+              <Link
+                href={project.url}
+                className="hover:text-white w-full h-full flex flex-col"
+              >
+                <div className="p-4 flex-grow">
+                  <h2 className="text-2xl">{project.title}</h2>
+                  <p className="text-2xl">{project.description}</p>
+                  <Image src={project.src} alt={project.alt} width={300} height={300} className="rounded-xl object-cover h-44"/>               
+                </div>
+                <div className="py-2 pl-4 hover:underline decoration-2">
+                  {t("projects.viewProject")}
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+
+          {/* "See All" link */}
+          <motion.div
+            initial="rest" whileHover="hover" whileTap="tap" animate="rest"
+            className="
+              shrink-0 w-72 h-80 
+              bg-white rounded-xl 
+              transition duration-300 
+              ease-linear hover:bg-deco 
+              text-deco hover:text-white"
+          >
+            <Link href="/projects" className="flex justify-center items-center h-full group">
+              <motion.h1 variants={textMotion} className="text-2xl group-hover:underline decoration-2">
+                {t("projects.seeAll")}
+              </motion.h1>
+              <motion.span variants={arrowMotion} className="focus:outline-none z-50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="currentColor"
+                  className="text-orange group-hover:white w-10 h-10"
+                >
+                  <path d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                </svg>
+              </motion.span>
+            </Link>
+          </motion.div>
+        </div>
       </motion.section>
     </AnimatePresence>
-
   );
 }

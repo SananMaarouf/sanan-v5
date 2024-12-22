@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Oi, Silkscreen, Chakra_Petch } from "next/font/google";
+import { Silkscreen, Chakra_Petch } from "next/font/google";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import { appWithTranslation } from "next-i18next";

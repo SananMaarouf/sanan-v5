@@ -1,6 +1,6 @@
-import React from "react";
 import { motion } from "motion/react";
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
 
 
 export default function Toolbox() {
@@ -45,29 +45,18 @@ export default function Toolbox() {
         my-10 md:items-start ml-2
         "
     >
-      {/* Container for the entire section */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="w-full"
-      >
+        className="w-full">
+        
         {/* Section title */}
         <h2 className="text-3xl mb-2 md:text-4xl">{t("toolbox.title")}</h2>
-
-        {/* Container for the technology categories */}
         <div className="text-xl md:text-2xl flex flex-col gap-4">
-
-          {/* Backend technologies section */}
           <div>
             <h3 className="underline decoration-2 mb-2">Backend:</h3>
-            <div className="
-              p-2  
-              flex flex-wrap  
-              gap-2 
-              text-xs md:text-sm
-            ">
-              {/* Mapping over backend technologies to create individual cards */}
+            <div className="p-2 flex flex-wrap gap-2 text-xs md:text-sm">
               {backend.map((tech, index) => (
                 <motion.div
                   key={index}
@@ -84,7 +73,7 @@ export default function Toolbox() {
                     w-24 h-24
                     md:w-28 md:h-28 
                   ">
-                  <img src={tech.src} alt={tech.alt} className="w-10 h-10 md:w-12 md:h-12" />
+                  <Image src={tech.src} alt={tech.alt} width={48} height={48} className="w-10 h-10 md:w-12 md:h-12" />
                   <p>{tech.title}</p>
                 </motion.div>
               ))}
@@ -94,12 +83,7 @@ export default function Toolbox() {
           {/* Frontend technologies section */}
           <div>
             <h3 className="underline decoration-2 mb-2">Frontend:</h3>
-            <div className="
-              p-2  
-              flex flex-wrap  
-              gap-2
-              text-xs md:text-sm
-            ">
+            <div className="p-2 flex flex-wrap gap-2 text-xs md:text-sm">
               {/* Mapping over frontend technologies to create individual cards */}
               {frontend.map((tech, index) => (
                 <motion.div
@@ -117,7 +101,7 @@ export default function Toolbox() {
                     w-24 h-24
                     md:w-28 md:h-28 
                   ">
-                  <img src={tech.src} alt={tech.alt} className="w-12 h-12" />
+                  <Image src={tech.src} alt={tech.alt} width={48} height={48} className="w-12 h-12" />
                   <p>{tech.title}</p>
                 </motion.div>
               ))}
@@ -150,7 +134,7 @@ export default function Toolbox() {
                     w-24 h-24
                     md:w-28 md:h-28 
                   ">
-                  <img src={tech.src} alt={tech.alt} className="w-12 h-12" />
+                  <Image src={tech.src} alt={tech.alt} width={48} height={48} className="w-12 h-12" />
                   <p>{tech.title}</p>
                 </motion.div>
               ))}

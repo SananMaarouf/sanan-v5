@@ -89,16 +89,21 @@
 			"download": "Last ned"
 		}
 	},
-	"projectsIndex": {
-		"descriptions": {
-			"applitrack": "Jobbsøknad tracker",
-			"greentalk": "Forum for miljødiskusjoner",
-			"sanplan": "Huskeliste app",
-			"insultifier": "Genererer fornærmelser",
-			"moviematch": "Gjør filmkvelder enklere",
-			"partnersos": "Voldsalarm / nødvarsling",
-			"sara": "Frilans arbeid: Portefølje side for en kunstner"
-		}
+	"projectsTypes": {
+		"web": "Nett",
+		"mobile": "Mobil",
+		"both": "Nett / Mobil",
+		"joke": "Nett / tull",
+		"other": "Annet"
+	},
+	"projectsDescriptions": {
+		"dubistro": "Band promo nettside for musikalsk duo i Oslo",
+		"applitrack": "Jobbsøknad tracker",
+		"partnersos": "Voldsalarm / nødvarsling",
+		"sanplan": "Enkel todo-app",
+		"sara": "Porteføljeside for kunstner fra Oslo",
+		"greentalk": "Forum for miljøinteresserte",
+		"insultifier": "Frekk-ifiserer tekster"
 	},
 	"partnersos": {
 		"description": "Voldsalarm / nødvarsling",

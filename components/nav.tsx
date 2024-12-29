@@ -116,7 +116,7 @@ export default function Navbar() {
                   </motion.div>
 
                   <motion.div variants={itemVariants}>
-                    <Link onClick={toggleMenu} href="/projects" className='hover:underline underline-offset-2 hover:text-deco'>
+                    <Link onClick={toggleMenu} href="/#projects" className='hover:underline underline-offset-2 hover:text-deco'>
                       {t("nav.projects")}
                     </Link>
                   </motion.div>
@@ -204,7 +204,7 @@ export default function Navbar() {
           </a>
         </motion.li>
         <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline hover:text-deco underline-offset-4">
-          <Link href="/projects">{t("nav.projects")}</Link>
+          <Link href="/#projects">{t("nav.projects")}</Link>
         </motion.li>
         <motion.li whileHover={{ scale: 1.1 }} className="mx-4 hover:underline underline-offset-4">
           <Dialog>

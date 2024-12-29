@@ -82,15 +82,15 @@ export default function Navbar() {
           {isOpen && (
             <section className=''>
               {/* the seethrough div that closes nav */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.9 }}
-                exit={{ opacity: 0}}
+                exit={{ opacity: 0 }}
                 transition={{ type: 'tween', duration: 0.3 }}
-                onClick={toggleMenu} 
+                onClick={toggleMenu}
                 className='fixed z-30 top-0 left-0 bg-black w-full h-full'>
-                </motion.div>
-              
+              </motion.div>
+
               {/* the actual nav */}
               <motion.section
                 key={"menu"}
@@ -217,15 +217,13 @@ export default function Navbar() {
                     href="https://www.linkedin.com/in/sanan-maarouf/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='text-xl font-bold border-2 rounded-md p-3 bg-deco hover:bg-orange-700  '>
+                    className='text-xl font-bold border-2 rounded-md p-3 bg-deco hover:bg-white hover:text-deco'>
                     LinkedIn
                   </Link>
                   <Link
-                    href="https://github.com/SananMaarouf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className='text-xl font-bold border-2 rounded-md p-3 bg-deco hover:bg-orange-700'>
-                    Github
+                    href="mailto:sanan.adnan97@gmail.com"
+                    className='text-xl font-bold border-2 rounded-md p-3 bg-deco hover:bg-white hover:text-deco'>
+                    Email
                   </Link>
                 </DialogDescription>
               </DialogHeader>

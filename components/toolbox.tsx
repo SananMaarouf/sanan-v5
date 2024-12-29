@@ -43,14 +43,13 @@ export default function Toolbox() {
         flex flex-col items-center 
         font-silkscreen flex-wrap 
         my-10 md:items-start ml-2
-        "
-    >
+    ">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
         className="w-full">
-        
+
         {/* Section title */}
         <h2 className="text-3xl mb-2 md:text-4xl">{t("toolbox.title")}</h2>
         <div className="text-xl md:text-2xl flex flex-col gap-4">
@@ -111,12 +110,7 @@ export default function Toolbox() {
           {/* Databases section */}
           <div>
             <h3 className="underline decoration-2 mb-2">{t("toolbox.db")}</h3>
-            <div className="
-              p-2  
-              flex flex-wrap  
-              gap-2 
-              text-xs md:text-sm
-            ">
+            <div className="p-2 flex flex-wrap gap-2 text-xs md:text-sm">
               {/* Mapping over database technologies to create individual cards */}
               {databases.map((tech, index) => (
                 <motion.div

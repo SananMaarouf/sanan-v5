@@ -121,9 +121,8 @@ export default function ProjectsCarousel() {
 
 									{/* project title */}
 									<p className="text-2xl">{project.title}</p>
-									
 									{/* project description */}
-									<div className="text-sm flex items-center h-20">
+									<div className="text-sm mt-2">
 										<p>{project.description}</p>
 									</div>
 								

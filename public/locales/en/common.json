@@ -90,16 +90,21 @@
 			"download": "Download"
 		}
 	},
-	"projectsIndex": {
-		"descriptions": {
-			"applitrack": "Job application tracker",
-			"greentalk": "Forum for environmental discussion",
-			"sanplan": "Todo app",
-			"insultifier": "Clap back quickly",
-			"moviematch": "Movie night made easy",
-			"partnersos": "Violence alarm / location sharing app",
-			"sara": "Freelance work: portfolio page for artist client"
-		}
+	"projectsTypes":{
+		"web": "Web",
+		"mobile": "Mobile",
+		"both": "Web / Mobile",
+		"joke": "Web / joke",
+		"other": "Other"
+	},
+	"projectsDescriptions": {
+		"dubistro": "Band promo website for a musician duo based in Oslo",
+		"applitrack": "Job application tracker",
+		"partnersos": "Emergency location sharing app",
+		"sanplan": "Simple todo app",
+		"sara": "Portfolio page for artist based in Oslo",
+		"greentalk": "Forum for environmental discussion",
+		"insultifier": "Insultifies text"
 	},
 	"partnersos": {
 		"description": "Violence alarm / location sharing app",

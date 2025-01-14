@@ -109,7 +109,7 @@ export default function ProjectsCarousel() {
 				<div className="overflow-x-scroll flex gap-6 py-4">
 					{projects.map((project, index) => (
 						<motion.div key={index}
-							className="group shrink-0 w-72 h-64 bg-white rounded-xl transition duration-300 ease-linear hover:bg-deco 
+							className="group shrink-0 w-72 h-56 bg-white rounded-xl transition duration-300 ease-linear hover:bg-deco 
 							text-deco">
 							<Link href={project.url} className="hover:text-white w-full h-full flex flex-col relative">
 								<div className="p-4 flex-grow">

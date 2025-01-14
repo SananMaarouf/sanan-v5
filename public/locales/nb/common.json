@@ -120,11 +120,20 @@
 	},
 	"applitrack": {
 		"description": "Jobbsøknad tracker",
-		"date": "18 august 2024",
+		"date": "18 august 2024. Oppdatert: Januar 2025",
 		"intro": "Applitrack er en webapp jeg laget for å spore jobbsøknadene jeg har sendt.",
 		"story": "Jeg laget dette verktøyet fordi jeg pleide å ha et regneark i Google Sheets og Microsoft Excel. Jeg byttet stadig mellom dem og glemte ofte hvilken som var den nyeste. Så jeg laget Applitrack for å se alle søknadene jeg hadde sendt, statusen på dem. Jeg ønsket også å kunne se statistikk over hvor mange søknader jeg hadde sendt, hvor mange jeg hadde fått svar fra og hvor mange jeg hadde fått et intervju fra.",
-		"nextJsExperience": "Å utvikle med Next.js var hyggelig, takket være innebygde verktøy som bildeoptimalisering og ruting. Hosting på Vercel, som er skreddersydd for Next.js, var sømløst. Tailwind CSS muliggjorde rask UI-utvikling, noe som gjorde det enkelt å lage responsive komponenter.",
-		"pocketbase": "Implementering av PocketBase var veldig lett takket være PocketHost og PocketBase SDK. Jeg kunne enkelt koble til databasen og hente data."
+		"experience":{
+			"title": "Min erfaring",
+			"v1": "I den første versjonen av applikasjonen brukte jeg Next.js og Pocketbase. Pocketbase, et lettvektig alternativ til Supabase med innebygd autentisering og en SQLite-database, sammen med Next.js, et kraftig JavaScript-rammeverk, gjorde utviklingen effektiv. Next.js sine innebygde funksjoner for ruting, bildeoptimalisering og statisk generering av HTML bidro til en produktiv arbeidsflyt. Til tross for dette bestemte jeg meg for å utfordre meg selv ved å skrive om applikasjonen uten Next.js.",
+			"v2": "I versjon 2 valgte jeg en stack bestående av Vite, React, TanStack Query/Router, Pocketbase, Hono.js og Cloudflare Workers. Dette ga meg verdifull erfaring med å utvikle modulære applikasjoner uten et omfattende rammeverk.",
+			"pros":{
+				"title": "Fordeler med denne stacken",
+				"routing-state": "Fleksibel ruting og state management: TanStack Router og Zustand ga full kontroll over arkitekturen og tilstandshåndtering.",
+				"performance": "Kraftig API med Cloudflare Workers: Ved hjelp av Cloudflare Workers og Hono.js kunne jeg lage et API for CRUD- og autentiseringsfunksjoner. Dette resulterte i redusert latenstid og forbedret global ytelse.",
+				"learning":"Læring og utforskning: Overgangen var en lærerik prosess som utvidet min forståelse av moderne webteknologi."
+			}
+		}
 	},
 	"greentalk": {
 		"description": "For miljøvernere",

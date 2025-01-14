@@ -36,15 +36,25 @@ export default function Applitrack() {
                 "
             >
                 <div className="w-full font-bold justify-center bg-white text-deco py-2 flex flex-col px-4 pb-2">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl">
-                        Applitrack.no
-                    </h1>
-                    <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl">
-                        {t("applitrack.description")}
-                    </p>
-                    <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl">
-                    {t("applitrack.date")}
-                    </p>
+                    <div className="flex flex-row">
+                        <div className="flex-1 w-full">
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl">
+                                Applitrack.no
+                            </h1>
+                            <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl">
+                                {t("applitrack.description")}
+                            </p>
+                            <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl">
+                                {t("applitrack.date")}
+                            </p>
+                        </div>
+                        <motion.div 
+                            animate={{ scale: [1,1.1,1]}}
+                            transition={{ repeat: 3, duration: 2 }}
+                            className="w-1/6 text-2xl text-end ">
+                                V2
+                        </motion.div>
+                    </div>
                 </div>
 
                 <Image
@@ -61,31 +71,34 @@ export default function Applitrack() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="text-xl font-chakra font-bold"
+                className="text-xl font-chakra font-bold mb-10"
             >
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
                         {t("applitrack.story")}
                     </p>
                 </section>
+                
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
-                    <h2 className="">Tech stack:</h2>
-                    <ul className="">
-                        <li>NextJS </li>
-                        <li>TailwindCSS</li>
-                        <li>PocketBase</li>
-                        <li>Vercel</li>
+                    <p className="text-2xl underline">
+                        {t("applitrack.experience.title")}:
+                    </p>
+                    <div className="space-y-4">
+                        <p className="">
+                            {t("applitrack.experience.v1")}
+                        </p>
+                        <p>
+                            {t("applitrack.experience.v2")}
+                        </p>
+                    </div>
+                </section>
+                <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
+                    <h2 className="underline text-2xl">{t("applitrack.experience.pros.title")}</h2>
+                    <ul className="list-disc list-inside mt-2 space-y-2">
+                        <li>{t("applitrack.experience.pros.routing-state")}</li>
+                        <li>{t("applitrack.experience.pros.performance")}</li>
+                        <li>{t("applitrack.experience.pros.learning")}</li>
                     </ul>
-                </section>
-                <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
-                    <p>
-                        {t("applitrack.nextJsExperience")}
-                    </p>
-                </section>
-                <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
-                    <p>
-                        {t("applitrack.pocketbase")}
-                    </p>
                 </section>
             </motion.div>
         </section>

@@ -124,8 +124,17 @@
 		"date": "August 18th, 2024",
 		"intro": "Applitrack is a webapp i made to track the job applications i have sent.",
 		"story": "I created this tool because i used to have a spreadsheet in Google Sheets and Microsoft Excel. I kept switching between them and often forgot which one was the most recent. So i created Applitrack to see all the applications i had sent, the status of them. I also wanted to be able to see statistics on how many applications i had sent, how many i had gotten a response from and how many i had gotten an interview from.",
-		"nextJsExperience": "Developing with Next.js was enjoyable, thanks to its built-in tools like image optimization and routing. Hosting on Vercel, which is tailored for Next.js, was seamless. Tailwind CSS facilitated rapid UI development, making responsive components easy to create.",
-		"pocketbase": "I used Pocketbase as the database for this project. Thanks to PocketHost i was able to host the database for free."
+		"experience": {
+			"title": "My Experience",
+			"v1": "In the first version of the application, I used Next.js and Pocketbase. Pocketbase, a lightweight alternative to Supabase with built-in authentication and an SQLite database, combined with Next.js, a powerful JavaScript framework, made development efficient. Next.js's built-in features for routing, image optimization, and static HTML generation contributed to a productive workflow. However, I decided to challenge myself by rewriting the application without Next.js.",
+			"v2": "In version 2, I chose a stack consisting of Vite, React, TanStack Query/Router, Pocketbase, Hono.js, and Cloudflare Workers. This gave me valuable experience in developing modular applications without a comprehensive framework.",
+			"pros": {
+				"title": "Advantages of This Stack",
+				"routing-state": "Flexible routing and state management: TanStack Router and Zustand provided full control over the architecture and state management.",
+				"performance": "Powerful API with Cloudflare Workers: Using Cloudflare Workers and Hono.js, I was able to create an API for CRUD and authentication features. This resulted in reduced latency and improved global performance.",
+				"learning": "Learning and exploration: The transition was a valuable process that expanded my understanding of modern web technologies."
+			}
+		}
 	},
 	"greentalk": {
 		"description": "For the environmentalists",

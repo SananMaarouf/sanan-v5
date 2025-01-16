@@ -66,17 +66,7 @@ export default function ProjectsCarousel() {
 			src: "/projects/greentalk.webp",
 			type: t('projectsTypes.web'),
 			tech: ["PHP", "HTML", "CSS", "JS", "MySQL"],
-		},
-		{
-			number: "O7",
-			alt: "Insultifier",
-			title: "Insultifier",
-			description: t('projectsDescriptions.insultifier'),
-			url: "/projects/insultifier",
-			src: "/projects/insultifier.webp",
-			type: t('projectsTypes.joke'),
-			tech: ["React", "Next.js", "TailwindCSS"],
-		},
+		}
 	];
 
 	return (

@@ -41,7 +41,7 @@ export default function Sanplan() {
                 rounded-2xl 
                 border 
                 border-transparent
-                bg-transparent 
+                bg-card 
                 md:w-3/5 
                 md:flex-row
                 lg:w-1/2
@@ -49,7 +49,12 @@ export default function Sanplan() {
                 "
             >
                 <div className="
-                    absolute md:relative bg-white text-deco md:bg-transparent font-bold md:my-auto justify-end h-2/6 w-full flex flex-col px-4 py-6 z-10 ">
+                    absolute bg-card
+                    text-deco font-bold 
+                    md:my-auto justify-end 
+                    md:relative h-2/6 
+                    w-full flex flex-col 
+                    px-4 py-6 z-10">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl">
                         SanPlan
                     </h1>

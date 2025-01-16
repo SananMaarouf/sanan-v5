@@ -15,6 +15,7 @@ export default function Toolbox() {
     { src: "/technologies/firebase.webp", alt: "Firebase", title: "Firebase" },
     { src: "/technologies/supabase.webp", alt: "Supabase", title: "Supabase" },
     { src: "/technologies/pocketbase.webp", alt: "Pocketbase", title: "Pocketbase" },
+    { src: "/technologies/cloudflare-worker.webp", alt: "Cloudflare Workers", title: "Cloudflare Workers" },
   ];
 
   const frontend = [
@@ -51,7 +52,7 @@ export default function Toolbox() {
         className="w-full">
 
         {/* Section title */}
-        <h2 className="text-3xl mb-2 md:text-4xl">{t("toolbox.title")}</h2>
+        <h2 className="text-3xl mb-2 md:text-4xl">{t("toolbox.title")}:</h2>
         <div className="text-xl md:text-2xl flex flex-col gap-4">
           <div>
             <h3 className="underline decoration-2 mb-2">Backend:</h3>

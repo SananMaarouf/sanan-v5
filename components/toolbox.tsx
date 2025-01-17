@@ -58,9 +58,8 @@ export default function Toolbox() {
             <h3 className="underline decoration-2 mb-2">Backend:</h3>
             <div className="p-2 flex flex-wrap gap-2 text-xs md:text-sm">
               {backend.map((tech, index) => (
-                <motion.div
+                <div
                   key={index}
-                  whileHover={{ scale: 1.1, rotate: -2 }}
                   className="
                     md:mx-1 
                     flex flex-col 
@@ -70,12 +69,12 @@ export default function Toolbox() {
                     bg-neutral-100 hover:bg-deco  
                     text-deco hover:text-white 
                     transition duration-75 hover:duration-150 ease-linear
-                    w-24 h-24
+                    w-24 h-24 hover:scale-110
                     md:w-28 md:h-28 
                   ">
                   <Image src={tech.src} alt={tech.alt} width={48} height={48} className="w-10 h-10 md:w-12 md:h-12" />
                   <p>{tech.title}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -86,9 +85,8 @@ export default function Toolbox() {
             <div className="p-2 flex flex-wrap gap-2 text-xs md:text-sm">
               {/* Mapping over frontend technologies to create individual cards */}
               {frontend.map((tech, index) => (
-                <motion.div
+                <div
                   key={index}
-                  whileHover={{ scale: 1.1, rotate: 2 }}
                   className="
                    md:mx-1 
                     flex flex-col 
@@ -98,12 +96,12 @@ export default function Toolbox() {
                     bg-white hover:bg-deco  
                     text-deco hover:text-white 
                     transition duration-75 hover:duration-150 ease-linear 
-                    w-24 h-24
+                    w-24 h-24 hover:scale-110
                     md:w-28 md:h-28 
                   ">
                   <Image src={tech.src} alt={tech.alt} width={48} height={48} className="w-12 h-12" />
                   <p>{tech.title}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -114,9 +112,8 @@ export default function Toolbox() {
             <div className="p-2 flex flex-wrap gap-2 text-xs md:text-sm">
               {/* Mapping over database technologies to create individual cards */}
               {databases.map((tech, index) => (
-                <motion.div
+                <div
                   key={index}
-                  whileHover={{ scale: 1.1, rotate: -2 }}
                   className="
                     md:mx-1 
                     flex flex-col 
@@ -126,12 +123,12 @@ export default function Toolbox() {
                     bg-white hover:bg-deco  
                     text-deco hover:text-white
                     transition duration-75 hover:duration-150 ease-linear 
-                    w-24 h-24
+                    w-24 h-24 hover:scale-110
                     md:w-28 md:h-28 
                   ">
                   <Image src={tech.src} alt={tech.alt} width={48} height={48} className="w-12 h-12" />
                   <p>{tech.title}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

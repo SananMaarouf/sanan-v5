@@ -4,7 +4,7 @@ import { Silkscreen, Chakra_Petch } from "next/font/google";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import { appWithTranslation } from "next-i18next";
-import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+import { BrowserView, isMobile } from 'react-device-detect';
 import AnimatedCursor from "react-animated-cursor"
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: "400" });

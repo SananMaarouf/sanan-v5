@@ -22,25 +22,27 @@ const App = ({ Component, pageProps }: AppProps) => {
         <main className="flex-grow font-silkscreen">
           <Component {...pageProps} />
         </main>
-        <BrowserView>
-          <AnimatedCursor
-            color="255,255,255"
-            innerSize={30}
-            outerSize={35}
-            innerScale={1}
-            outerScale={2}
-            outerAlpha={1}
-            trailingSpeed={6}
-            clickables={["button", "a","span","ul","img"]}
-            outerStyle={{
-              mixBlendMode: 'exclusion',
-            }}
-            innerStyle={{
-              backgroundColor: 'var(--cursor-color)',
-              mixBlendMode: 'exclusion'
-            }}
-          />
-        </BrowserView>
+        {!isMobile && (
+          <BrowserView>
+            <AnimatedCursor
+              color="255,255,255"
+              innerSize={30}
+              outerSize={35}
+              innerScale={1}
+              outerScale={2}
+              outerAlpha={1}
+              trailingSpeed={6}
+              clickables={["button", "a", "span", "ul", "img"]}
+              outerStyle={{
+                mixBlendMode: 'exclusion',
+              }}
+              innerStyle={{
+                backgroundColor: 'var(--cursor-color)',
+                mixBlendMode: 'exclusion'
+              }}
+            />
+          </BrowserView>
+        )}
       </div>
       <Footer />
     </>

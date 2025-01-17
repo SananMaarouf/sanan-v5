@@ -25,11 +25,13 @@ const App = ({ Component, pageProps }: AppProps) => {
         <BrowserView>
           <AnimatedCursor
             color="255,255,255"
-            innerSize={8}
+            innerSize={30}
             outerSize={35}
             innerScale={1}
             outerScale={2}
             outerAlpha={1}
+            trailingSpeed={6}
+            clickables={["button", "a","span","ul","img"]}
             outerStyle={{
               mixBlendMode: 'exclusion',
             }}

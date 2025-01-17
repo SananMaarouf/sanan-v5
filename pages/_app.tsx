@@ -29,7 +29,7 @@ const App = ({ Component, pageProps }: AppProps) => {
               innerSize={30}
               outerSize={35}
               innerScale={1}
-              outerScale={2}
+              outerScale={1.2}
               outerAlpha={1}
               trailingSpeed={6}
               clickables={["button", "a", "span", "ul", "img"]}

@@ -37,20 +37,11 @@ export default function Toolbox() {
   return (
     <motion.section
       initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="
-        rounded-xl mx-auto md:mx-auto  
-        flex flex-col items-center 
-        font-silkscreen flex-wrap 
-        my-10 md:items-start ml-2
-    ">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-        className="w-full">
-
+      viewport={{ once: true }}
+      className="rounded-xl mx-auto md:mx-auto flex flex-col items-center font-silkscreen flex-wrap my-10 md:items-start ml-2">
+      <div className="w-full">
         {/* Section title */}
         <h2 className="text-3xl mb-2 md:text-4xl">{t("toolbox.title")}:</h2>
         <div className="text-xl md:text-2xl flex flex-col gap-4">
@@ -133,7 +124,7 @@ export default function Toolbox() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 }

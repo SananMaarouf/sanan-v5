@@ -70,68 +70,67 @@ export default function ProjectsCarousel() {
 	];
 
 	return (
-		<AnimatePresence>
-			<motion.section
-				ref={ref}
-				initial={{ opacity: 0, y: 200 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ delay: 0.6, duration: 1 }}
-				className="my-10 md:mx-auto font-silkscreen relative w-full xl:w-10/12"
+		<motion.section
+			ref={ref}
+			initial={{ opacity: 0, y: 200 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			viewport={{ once: true }}
+			transition={{ duration: 1 }}
+			className="my-10 md:mx-auto font-silkscreen relative w-full xl:w-10/12"
+		>
+			{/* indicate to user */}
+			<h1 className="text-3xl mb-2">{t("projects.title")}</h1>
+			<motion.p
+				animate={{ scale: [1, 1.1, 1] }}
+				transition={{ repeat: 10, duration: 2 }}
+				className="block xl:hidden absolute right-2 top-2"
 			>
-				{/* indicate to user */}
-				<h1 className="text-3xl mb-2">{t("projects.title")}</h1>
-				<motion.p
-					animate={{ scale: [1, 1.1, 1] }}
-					transition={{ repeat: 10, duration: 2 }}
-					className="block xl:hidden absolute right-2 top-2"
-				>
-					swipe ➡️
-				</motion.p>
-				<motion.p
-					animate={{ scale: [1, 1.1, 1] }}
-					transition={{ repeat: 10, duration: 2 }}
-					className="hidden xl:block absolute right-2 top-2"
-				>
-					scroll ➡️
-				</motion.p>
+				swipe ➡️
+			</motion.p>
+			<motion.p
+				animate={{ scale: [1, 1.1, 1] }}
+				transition={{ repeat: 10, duration: 2 }}
+				className="hidden xl:block absolute right-2 top-2"
+			>
+				scroll ➡️
+			</motion.p>
 
-				{/* horizontal slider */}
-				<div className="overflow-x-scroll flex gap-6 py-4">
-					{projects.map((project, index) => (
-						<motion.div key={index}
-							className="group shrink-0 w-72 h-56 bg-white rounded-xl transition duration-300 ease-linear hover:bg-deco 
+			{/* horizontal slider */}
+			<div className="overflow-x-scroll flex gap-6 py-4">
+				{projects.map((project, index) => (
+					<motion.div key={index}
+						className="group shrink-0 w-72 h-56 bg-white rounded-xl transition duration-300 ease-linear hover:bg-deco 
 							text-deco">
-							<Link href={project.url} className="hover:text-white w-full h-full flex flex-col relative">
-								<div className="p-4 flex-grow">
-									{/* project number and type  */}
-									<div className="flex justify-between">
-										<h2 className="text-2xl">{project.number}</h2>
-										<p className="text-sm my-auto">{project.type}</p>
-									</div>
-
-									{/* project title */}
-									<p className="text-2xl">{project.title}</p>
-									{/* project description */}
-									<div className="text-sm mt-2">
-										<p>{project.description}</p>
-									</div>
-								
+						<Link href={project.url} className="hover:text-white w-full h-full flex flex-col relative">
+							<div className="p-4 flex-grow">
+								{/* project number and type  */}
+								<div className="flex justify-between">
+									<h2 className="text-2xl">{project.number}</h2>
+									<p className="text-sm my-auto">{project.type}</p>
 								</div>
 
-								{/* tech stack tags */}
-								<div className="flex flex-wrap-reverse gap-1 p-1 mr-1 mb-1 h-14 justify-end">
-									{project.tech.map((tech, i) => (
-										<span key={i} className="bg-deco text-white h-6 text-xs rounded-md p-1 group-hover:bg-white group-hover:text-deco">
-											{tech}
-										</span>
-									))}
+								{/* project title */}
+								<p className="text-2xl">{project.title}</p>
+								{/* project description */}
+								<div className="text-sm mt-2">
+									<p>{project.description}</p>
 								</div>
 
-							</Link>
-						</motion.div>
-					))}
-				</div>
-			</motion.section>
-		</AnimatePresence>
+							</div>
+
+							{/* tech stack tags */}
+							<div className="flex flex-wrap-reverse gap-1 p-1 mr-1 mb-1 h-14 justify-end">
+								{project.tech.map((tech, i) => (
+									<span key={i} className="bg-deco text-white h-6 text-xs rounded-md p-1 group-hover:bg-white group-hover:text-deco">
+										{tech}
+									</span>
+								))}
+							</div>
+
+						</Link>
+					</motion.div>
+				))}
+			</div>
+		</motion.section>
 	);
 }

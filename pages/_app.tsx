@@ -4,6 +4,7 @@ import { Silkscreen, Chakra_Petch } from "next/font/google";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import { appWithTranslation } from "next-i18next";
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 import AnimatedCursor from "react-animated-cursor"
 
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: "400" });
@@ -21,23 +22,25 @@ const App = ({ Component, pageProps }: AppProps) => {
         <main className="flex-grow font-silkscreen">
           <Component {...pageProps} />
         </main>
-        <AnimatedCursor
-          color="255,255,255"
-          innerSize={8}
-          outerSize={35}
-          innerScale={1}
-          outerScale={2}
-          outerAlpha={1}
-          outerStyle={{
-            mixBlendMode: 'exclusion'
-          }}
-          innerStyle={{
-            backgroundColor: 'var(--cursor-color)',
-            mixBlendMode: 'exclusion'
-          }}
-        />
+        <BrowserView>
+          <AnimatedCursor
+            color="255,255,255"
+            innerSize={8}
+            outerSize={35}
+            innerScale={1}
+            outerScale={2}
+            outerAlpha={1}
+            outerStyle={{
+              mixBlendMode: 'exclusion',
+            }}
+            innerStyle={{
+              backgroundColor: 'var(--cursor-color)',
+              mixBlendMode: 'exclusion'
+            }}
+          />
+        </BrowserView>
       </div>
-        <Footer />
+      <Footer />
     </>
   );
 }

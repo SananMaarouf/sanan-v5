@@ -28,7 +28,6 @@ export default function Custom404() {
         >
           <Link href='/'>Go back home</Link>
       </Button>
-
     </div>
   );
 }
